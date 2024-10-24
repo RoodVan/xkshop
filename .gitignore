@@ -1,0 +1,9 @@
+/node_modules/
+/!INFO/
+/**/*.psd
+/**/Thumbs.db
+.idea/
+.DS_Store
+/**/.DS_Store
+workspace.code-workspace
+jsconfig.json

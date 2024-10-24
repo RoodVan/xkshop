@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head }}
+</head>
+<body>
+
+{{> body }}
+
+{{> sprite }}
+
+
+<!-- Basket Start -->
+<div class="basket">
+    <span class="basket__close" onclick="closeCard()">
+        <svg><use xlink:href="#ic-x"></use></svg>
+    </span>
+    <div class="basket__caption">Корзина</div>
+    <div class="basket__body">
+        <span>3 товара</span>
+        <strong>199€</strong>
+    </div>
+    <a href="#" class="btn btn--black">В корзину</a>
+</div>
+<!-- Basket End -->
+
+<script src="assets/js/libs/jquery-3.7.1.min.js"></script>
+<script src="assets/js/app.min.js"></script>
+
+</body>
+</html>

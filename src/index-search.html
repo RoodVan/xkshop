@@ -1,0 +1,351 @@
+---
+layout: default
+title: Shop Admin
+---
+
+<div class="wrapper">
+    <header>
+        <div class="container topline">
+            <div class="search">
+                <div class="search__form">
+                    <input type="text" class="inp search__inp" placeholder="Поиск">
+                    <svg class="search__icon">
+                        <use xlink:href="#ic-search"></use>
+                    </svg>
+                </div>
+            </div>
+
+            <button type="button" class="btn--circle mobile-hamburger">
+                <svg>
+                    <use xlink:href="#ic-hamburger"></use>
+                </svg>
+            </button>
+
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item hide-mobile"><a href="#" class="menu__link">Главная</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">FAQ</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
+                    <li class="menu__item ubox">
+                        <a href="#" class="menu__link">Авторизация</a>
+                    </li>
+                </ul>
+                <ul class="lang lang--mobile">
+                    <li class="lang__item"><a href="#" class="lang__link lang__link--active">RU</a></li>
+                    <li class="lang__item"><a href="#" class="lang__link">EN</a></li>
+                </ul>
+            </nav>
+
+            <ul class="lang">
+                <li class="lang__item"><a href="#" class="lang__link lang__link--active">RU</a></li>
+                <li class="lang__item"><a href="#" class="lang__link">EN</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="container main-wrapper">
+            <div class="main-middle">
+                <div class="main-caption">
+                    <a href="#" class="back-btn">
+                        <svg>
+                            <use xlink:href="#ic-arr-prev"></use>
+                        </svg>
+                    </a>
+                    <p>По запросу <strong>“подписки”</strong> найдено 4 товара</p>
+                </div>
+
+                <div class="bg-cards">
+
+                    <div class="bg-cards__col">
+                        <div class="bg-cards__item">
+                            <div class="bg-cards__discount">-5%</div>
+                            <div class="bg-cards__head">
+                                <img src="assets/img/content/cards/bg-steam.png" alt="">
+                            </div>
+                            <div class="bg-cards__body">
+                                <div class="bg-cards__caption">
+                                    <span class="cmark">Европа</span>
+                                    <h4>Пополнение Steam</h4>
+                                </div>
+                                <div class="bg-cards__desc">
+                                    Lorem ipsum dolor sit amet consectetur. Egestas morbi viverra sodales ultrices rutrum vel sed egestas. Leo ante et tortor leo quam dui.
+                                </div>
+                            </div>
+                            <div class="bg-cards__foot">
+                                <div class="bg-cards__stock">В наличии 834</div>
+                                <div class="bg-cards__props">
+                                    <div class="bg-cards__counter">
+                                        <button type="button" class="btn" data-minus>
+                                            <svg><use xlink:href="#ic-minus"></use></svg>
+                                        </button>
+                                        <input type="text" class="inp" value="1" data-isnumber-100 data-count>
+                                        <button type="button" class="btn" data-plus>
+                                            <svg><use xlink:href="#ic-plus"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div class="mark-info" data-tippy-content="Товар с гарантией на замену товара <b>2</b> раза в течении <b>15</b> дней.">
+                                        <svg><use xlink:href="#ic-info"></use></svg>
+                                    </div>
+                                    <div class="bg-cards__price">199€</div>
+                                </div>
+                                <button type="button" onclick="addCard(this)" class="btn btn--black">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cards__col">
+                        <div class="bg-cards__item">
+                            <div class="bg-cards__head">
+                                <img src="assets/img/content/cards/bg-phub.png" alt="">
+                            </div>
+                            <div class="bg-cards__body">
+                                <div class="bg-cards__caption">
+                                    <span class="cmark">Европа</span>
+                                    <h4>Подписка Pornhub</h4>
+                                </div>
+                                <div class="bg-cards__desc">
+                                    Lorem ipsum dolor sit amet consectetur. Egestas morbi viverra sodales ultrices rutrum vel sed egestas. Leo ante et tortor leo quam dui.
+                                </div>
+                            </div>
+                            <div class="bg-cards__foot">
+                                <div class="bg-cards__stock">В наличии 834</div>
+                                <div class="bg-cards__props">
+                                    <div class="bg-cards__counter">
+                                        <button type="button" class="btn" data-minus>
+                                            <svg><use xlink:href="#ic-minus"></use></svg>
+                                        </button>
+                                        <input type="text" class="inp" value="1" data-isnumber-100 data-count>
+                                        <button type="button" class="btn" data-plus>
+                                            <svg><use xlink:href="#ic-plus"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div class="mark-info" data-tippy-content="Товар с гарантией на замену товара <b>2</b> раза в течении <b>15</b> дней.">
+                                        <svg><use xlink:href="#ic-info"></use></svg>
+                                    </div>
+                                    <div class="bg-cards__price">0€</div>
+                                </div>
+                                <button type="button" class="btn btn--green">Скачать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cards__col">
+                        <div class="bg-cards__item">
+                            <div class="bg-cards__head">
+                                <img src="assets/img/content/cards/bg-origin.png" alt="">
+                            </div>
+                            <div class="bg-cards__body">
+                                <div class="bg-cards__caption">
+                                    <span class="cmark">Европа</span>
+                                    <h4>Подписка Origin</h4>
+                                </div>
+                                <div class="bg-cards__desc">
+                                    Lorem ipsum dolor sit amet consectetur. Egestas morbi viverra sodales ultrices rutrum vel sed egestas. Leo ante et tortor leo quam dui.
+                                </div>
+                            </div>
+                            <div class="bg-cards__foot">
+                                <div class="bg-cards__stock _no">Нет в наличии</div>
+                                <div class="bg-cards__props">
+                                    <div class="bg-cards__counter">
+                                        <button type="button" class="btn" data-minus>
+                                            <svg><use xlink:href="#ic-minus"></use></svg>
+                                        </button>
+                                        <input type="text" class="inp" value="1" data-isnumber-100 data-count>
+                                        <button type="button" class="btn" data-plus>
+                                            <svg><use xlink:href="#ic-plus"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div class="mark-info" data-tippy-content="Товар с гарантией на замену товара <b>2</b> раза в течении <b>15</b> дней.">
+                                        <svg><use xlink:href="#ic-info"></use></svg>
+                                    </div>
+                                    <div class="bg-cards__price">199€</div>
+                                </div>
+                                <button type="button" class="btn btn--black" disabled>В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cards__col">
+                        <div class="bg-cards__item">
+                            <div class="bg-cards__head">
+                                <img src="assets/img/content/cards/bg-spotify.png" alt="">
+                            </div>
+                            <div class="bg-cards__body">
+                                <div class="bg-cards__caption">
+                                    <span class="cmark">Европа</span>
+                                    <h4>Подписка Spotify</h4>
+                                </div>
+                                <div class="bg-cards__desc">
+                                    Lorem ipsum dolor sit amet consectetur. Egestas morbi viverra sodales ultrices rutrum vel sed egestas. Leo ante et tortor leo quam dui.
+                                </div>
+                            </div>
+                            <div class="bg-cards__foot">
+                                <div class="bg-cards__stock">В наличии 834</div>
+                                <div class="bg-cards__props">
+                                    <div class="bg-cards__counter">
+                                        <button type="button" class="btn" data-minus>
+                                            <svg><use xlink:href="#ic-minus"></use></svg>
+                                        </button>
+                                        <input type="text" class="inp" value="1" data-isnumber-100 data-count>
+                                        <button type="button" class="btn" data-plus>
+                                            <svg><use xlink:href="#ic-plus"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div class="mark-info" data-tippy-content="Товар с гарантией на замену товара <b>2</b> раза в течении <b>15</b> дней.">
+                                        <svg><use xlink:href="#ic-info"></use></svg>
+                                    </div>
+                                    <div class="bg-cards__price">199€</div>
+                                </div>
+                                <button type="button" onclick="addCard(this)" class="btn btn--black">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-cards__col">
+                        <div class="bg-cards__item">
+                            <div class="bg-cards__head">
+                                <img src="assets/img/content/cards/bg-ubisoft.png" alt="">
+                            </div>
+                            <div class="bg-cards__body">
+                                <div class="bg-cards__caption">
+                                    <span class="cmark">Европа</span>
+                                    <h4>Подписка Ubisoft</h4>
+                                </div>
+                                <div class="bg-cards__desc">
+                                    Lorem ipsum dolor sit amet consectetur. Egestas morbi viverra sodales ultrices rutrum vel sed egestas. Leo ante et tortor leo quam dui.
+                                </div>
+                            </div>
+                            <div class="bg-cards__foot">
+                                <div class="bg-cards__stock">В наличии 834</div>
+                                <div class="bg-cards__props">
+                                    <div class="bg-cards__counter">
+                                        <button type="button" class="btn" data-minus>
+                                            <svg><use xlink:href="#ic-minus"></use></svg>
+                                        </button>
+                                        <input type="text" class="inp" value="1" data-isnumber-100 data-count>
+                                        <button type="button" class="btn" data-plus>
+                                            <svg><use xlink:href="#ic-plus"></use></svg>
+                                        </button>
+                                    </div>
+                                    <div class="mark-info" data-tippy-content="Товар с гарантией на замену товара <b>2</b> раза в течении <b>15</b> дней.">
+                                        <svg><use xlink:href="#ic-info"></use></svg>
+                                    </div>
+                                    <div class="bg-cards__price">199€</div>
+                                </div>
+                                <button type="button" onclick="addCard(this)" class="btn btn--black">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- ./ bg-cards__list -->
+            </div>
+            <!-- ./ main-middle -->
+
+            <aside class="main-right">
+                <div class="usprops">
+                    <div class="inp usprops__balance">
+                        <span>Баланс</span>
+                        <strong>5482€</strong>
+                    </div>
+                    <div class="usprops__deposit">
+                        <input type="text" class="inp" placeholder="Сумма пополнения">
+                        <span class="im-extra">+XX€</span>
+                    </div>
+                    <div class="usprops__btns">
+                        <button type="button" class="btn btn--black">Пополнить</button>
+                        <a href="#" class="btn btn--line">Покупки</a>
+                        <a href="#" class="btn btn--tg">
+                            <svg>
+                                <use xlink:href="#ic-soc-tg"></use>
+                            </svg>
+                            <span>Telegram</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cgfilters">
+                    <div class="cgfilters__caption">
+                        <svg>
+                            <use xlink:href="#ic-filters"></use>
+                        </svg>
+                        <span>Фильтры</span>
+                    </div>
+
+                    <div class="cgfilters__form">
+                        <div class="cgfilters__group">
+                            <div class="cgfilters__label">Limits</div>
+
+                            <div class="cg-range">
+                                <div class="cg-range__actions">
+                                    <div class="cg-range__sliderout">
+                                        <div class="cg-range__sliderin"></div>
+                                    </div>
+                                    <div class="cg-range__itms">
+                                        <input type="range" 
+                                            class="min-range" 
+                                            min="0" 
+                                            max="5000" 
+                                            value="250" 
+                                            step="1">
+                                        <input type="range" 
+                                            class="max-range" 
+                                            min="0" 
+                                            max="5000" 
+                                            value="2500" 
+                                            step="1">
+                                    </div>
+                                </div>
+                                <div class="cg-range__inputs">
+                                    <div class="cg-range__inp">
+                                        <span>от</span>
+                                        <input type="number" data-isnumber class="inp min-input" value="250">
+                                    </div>
+                                    <div class="cg-range__inp">
+                                        <span>до</span>
+                                        <input type="number" data-isnumber class="inp max-input" value="2500">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="cgfilters__group">
+                            <div class="custom-select">
+                                <select xplaceholder="Country">
+                                    <option value="0">США</option>
+                                    <option value="1">Россия</option>
+                                    <option value="2">Великобритания</option>
+                                    <option value="3">Испания</option>
+                                  </select>
+                            </div>
+                        </div>
+
+                        <div class="cgfilters__group">
+                            <div class="custom-select">
+                                <select xplaceholder="Linked">
+                                    <option value="0">Linked 1</option>
+                                    <option value="1">Linked 2</option>
+                                    <option value="2">Linked 3</option>
+                                    <option value="3">Linked 4</option>
+                                  </select>
+                            </div>
+                        </div>
+
+                        <div class="cgfilters__group">
+                            <label class="cgfilters__checkbox checkbox inp">
+                                <input type="checkbox" class="checkbox__inp">
+                                <span class="checkbox__frame"></span>
+                                <span class="checkbox-label">Только в наличии</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inote">По Вашему запросу найдено <strong>33</strong> товара</div>
+            </aside>
+            <!-- ./ main-right -->
+        </div>
+    </main>
+</div>
