@@ -82,6 +82,15 @@
 		}
 	}
 
+	&--red{
+		background: #FF3232;
+		border-radius: 15px;
+		color: #E8E8E8;
+		&:hover{
+			background: #D61D1D;
+		}
+	}
+
 	&--circle{
 		outline: none;
 		touch-action: manipulation;

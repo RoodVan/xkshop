@@ -320,7 +320,7 @@ title: Shop Admin
                                     </div>
                                     <div class="bg-cards__price _new">199€ <span class="_old">$299</span></div>
                                 </div>
-                                <button type="button" onclick="addCard(this)" class="btn btn--black">В корзину</button>
+                                <button type="button" onclick="addCard(this)" class="btn btn--red">В корзину</button>
                             </div>
                         </div>
                     </div>
@@ -393,7 +393,7 @@ title: Shop Admin
                                     </div>
                                     <div class="bg-cards__price">199€</div>
                                 </div>
-                                <button type="button" onclick="addCard(this)" class="btn btn--black">В корзину</button>
+                                <button type="button" onclick="addCard(this)" class="btn btn--red">В корзину</button>
                             </div>
                         </div>
                     </div>
@@ -512,7 +512,20 @@ title: Shop Admin
             <!-- ./ main-middle -->
 
             <aside class="main-right">
-                <div class="usprops">
+                <div class="usprops-lock">
+                    <div class="usprops-lock__icon">
+                        <svg>
+                            <use xlink:href="#ic-lock"></use>
+                        </svg>
+                    </div>
+                    <div class="usprops-lock__desc">
+                        Lorem ipsum dolor sit amet consectetur. Egestas morbi viverra.
+                    </div>
+                    <a href="#" class="btn btn--black">Авторизоваться</a>
+                </div>
+                <!-- ./ usprops__lock -->
+                 
+                <div class="usprops usprops--lock">
                     <div class="inp usprops__balance">
                         <span>Баланс</span>
                         <strong>5482€</strong>
@@ -610,8 +623,6 @@ title: Shop Admin
                         </div>
                     </div>
                 </div>
-
-                <div class="inote">По Вашему запросу найдено <strong>33</strong> товара</div>
             </aside>
             <!-- ./ main-right -->
         </div>
