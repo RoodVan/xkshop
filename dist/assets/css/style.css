@@ -1185,6 +1185,10 @@ footer {
     flex: 0 0 auto;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
 /* Blocks */
 .topline {
     padding-top: 28px;

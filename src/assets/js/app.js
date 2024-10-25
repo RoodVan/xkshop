@@ -21,6 +21,12 @@ $(function(){
         $('.menu').toggleClass('menu--open');
         let xlink = $('.menu').hasClass('menu--open') ? '#ic-x' : '#ic-hamburger';
         $('.mobile-hamburger use').attr('xlink:href', xlink);
+
+        if($('.menu').hasClass('menu--open')) {
+            $('body').addClass('overflow-hidden');
+        } else {
+            $('body').removeClass('overflow-hidden');
+        }
     });
 
 
