@@ -5,6 +5,7 @@
 //= components/select
 //= components/popper
 //= components/tippy
+//= components/multiselect
 
 
 /* FUNCTIONS                                      
@@ -35,8 +36,8 @@ $(function(){
         const $carousel = $(element);
         const $prevBtn = $carousel.closest('.sm-card__carousel').find('.sm-card__prevbtn');
         const $nextBtn = $carousel.closest('.sm-card__carousel').find('.sm-card__nextbtn');
-        // for mobile
-        const $scrollBar = $carousel.closest('.sm-card__carousel').find('.smc-scroll');
+        const $scrollBar = $carousel.closest('.sm-card__carousel').find('.smc-scroll'); // for mobile
+        let prevClicked = false;
 
         $carousel.on('initialized.owl.carousel', function(e) {
             let perPage = e.page.size;
@@ -77,11 +78,18 @@ $(function(){
                 let totalItems = event.item.count;  
                 let currentItem = event.item.index;
                 let visibleItems = event.page.size;
-            
+                // Next
                 if (currentItem >= totalItems - visibleItems) {
                     $nextBtn.one('click', function() {
                     $carousel.trigger('to.owl.carousel', [0, 300]);
                   });
+                }
+                // Previous
+                if (currentItem === 0) {
+                    $prevBtn.one('click', function() {
+                        $carousel.trigger('to.owl.carousel', [totalItems - 1, 300]);
+                        prevClicked = true;
+                    });
                 }
             }
         });
@@ -94,9 +102,16 @@ $(function(){
         });
 
         $prevBtn.on('click', function() {
-            $carousel.trigger('prev.owl.carousel');
             let currentIndex = $carousel.find('.owl-item.active').index();
             let barPosition = $scrollBar.width() * currentIndex;
+            let totalItems = $carousel.find('.owl-item').length;
+
+            if (!prevClicked && currentIndex === 0) {
+                $carousel.trigger('to.owl.carousel', [totalItems - 1, 300]);
+            } else {
+                $carousel.trigger('prev.owl.carousel');
+            }
+
             $scrollBar.animate({left: barPosition},200);
         });
 
@@ -135,23 +150,6 @@ $(function(){
 
         $scrollBar.on('touchend', function() {
             isDragging = false;
-        });
-    });
-
-
-    // Big Cards Preview carousel
-    $('.bg-cards-carousel').each(function(index, element) {
-        const $carousel = $(element);
-        $carousel.addClass("owl-carousel").owlCarousel({
-            items:1,
-            margin:0,
-            autoHeight:true,
-            loop: false,
-            nav: false,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            autoplayHoverPause: true
         });
     });
 
@@ -204,7 +202,21 @@ $(function(){
             $inpVal.val(parseInt(val)+1);
             $btnMin.prop('disabled') && $btnMin.prop('disabled', false);
         });
+
+        $inpVal.on('input', (e) => {
+            ($inpVal.val() == 1) && $btnMin.prop('disabled', true);
+            ($inpVal.val() > 1 && $btnMin.prop('disabled')) && $btnMin.prop('disabled', false);
+        });
     });
+
+
+    // Select multi
+    if(document.querySelectorAll('[data-multi-select]').length) {
+        document.querySelectorAll('[data-multi-select]').forEach(select => new MultiSelect(select, {
+            selectAll: false,
+            search: false
+        }));
+    }   
 
     // Tippy tooltip
     tippy('[data-tippy-content]', {
