@@ -1669,6 +1669,12 @@ footer {
     top: 55px;
     right: 30px;
     display: none;
+    padding: 0;
+}
+
+.mobile-hamburger svg {
+    width: 19px;
+    height: 19px;
 }
 
 @media only screen and (max-width: 1024px) {
