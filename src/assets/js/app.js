@@ -20,8 +20,9 @@ $(function(){
     $('.mobile-hamburger').on('click', (e) => {
         e.preventDefault();
         $('.menu').toggleClass('menu--open');
-        let xlink = $('.menu').hasClass('menu--open') ? '#ic-x' : '#ic-hamburger';
-        $('.mobile-hamburger use').attr('xlink:href', xlink);
+        let xlink = $('.menu').hasClass('menu--open') ? 'ic-x' : 'ic-hamburger';
+        $('.mobile-hamburger use').attr('xlink:href', `#${xlink}`);
+        $('.mobile-hamburger svg').attr('class', xlink);
 
         if($('.menu').hasClass('menu--open')) {
             $('body').addClass('overflow-hidden');
@@ -37,6 +38,7 @@ $(function(){
         const $prevBtn = $carousel.closest('.sm-card__carousel').find('.sm-card__prevbtn');
         const $nextBtn = $carousel.closest('.sm-card__carousel').find('.sm-card__nextbtn');
         const $scrollBar = $carousel.closest('.sm-card__carousel').find('.smc-scroll'); // for mobile
+        const $nextBtnMobile = $carousel.closest('.sm-card__carousel').find('.sm-card__mobile-nextbtn');
         let prevClicked = false;
 
         $carousel.on('initialized.owl.carousel', function(e) {
@@ -52,6 +54,7 @@ $(function(){
             loop: false,
             dots: false,
             drag: true,
+            mouseDrag: false,
             responsive: {
                 0: {
                     margin: 10,
@@ -112,6 +115,23 @@ $(function(){
                 $carousel.trigger('prev.owl.carousel');
             }
 
+            $scrollBar.animate({left: barPosition},200);
+        });
+
+        $nextBtnMobile.on('click', function(e) {
+            let totalItems = $carousel.find('.owl-item').length;
+            let currentIndex = $carousel.find('.owl-item.active').index();
+            let visibleItems = $carousel.find('.owl-item.active').length;
+            let wWidth = $(window).width();
+            let bxWidth = $('.sm-card__list').width();
+            let itWidthActive = 200 * visibleItems;
+            totalItems = bxWidth < itWidthActive ? totalItems + 1 : totalItems;
+            console.log(itWidthActive, bxWidth, currentIndex,totalItems - visibleItems, currentIndex <= totalItems - visibleItems);
+            if (currentIndex < totalItems - visibleItems) {
+               e.preventDefault();
+            }
+            $carousel.trigger('next.owl.carousel');
+            let barPosition = $scrollBar.width() * currentIndex;
             $scrollBar.animate({left: barPosition},200);
         });
 

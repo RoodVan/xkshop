@@ -29,6 +29,10 @@
     margin: 0 auto;
     padding-left: 100px;
     padding-right: 100px;
+    @media only screen and (max-width: 1860px){
+        padding-left: 50px;
+        padding-right: 50px;
+    }
     @media only screen and (max-width: 1720px){
         padding-left: 30px;
         padding-right: 30px;
@@ -220,6 +224,10 @@ footer{
     svg{
         width: 19px;
         height: 19px;
+        &.ic-x{
+            width: 16px;
+            height: 16px;
+        }
     }
     @media only screen and (max-width: 1024px){
         display: flex;
@@ -413,7 +421,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 200px;
+    min-width: 190px;
     &__caption{
         display: flex;
         align-items: center;
@@ -481,29 +489,86 @@ footer{
 			width: 9px;
 			height: 16px;
 			fill: #BCBCC5;
+            transition: all .2s ease-in-out;
 		}
 		&:focus, &:active{
 			outline: none;
 			text-decoration: none;
 		}
 		&:hover{
-			background: rgba(188, 188, 197, .4);
+            background: #E5E5EB;
+            svg{
+                fill: #86868B;
+            }
 		}
     }
     &__prevbtn{
-        left: -15px;
+        left: -23px;
         padding-right: 1px;
     }
     &__nextbtn{
-        right: -15px;
+        right: -23px;
         padding-left: 1px;
+    }
+    &__mobile-nextbtn{
+        display: none;
+        outline: none;
+		touch-action: manipulation;
+		cursor: pointer;
+		border: none;
+		text-decoration: none;
+		white-space: nowrap;
+		user-select: none;
+		appearance: none;
+        z-index: 2;
+        transition: all .2s ease-in-out;
     }
     @media only screen and (max-width: 768px){
         &__prevbtn, &__nextbtn{
             display: none;
         }
+        width: 200px;
+        &__mobile-nextbtn{
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex: 0 0 70px;
+            max-width: 70px;
+            background: #F5F5F7;
+            border-radius: 30px;
+            position: relative;
+            svg{
+                width: 12px;
+                height: 19px;
+                fill: #BCBCC5;
+                position: absolute;
+                top: 0; bottom: 0;
+                margin-top: auto;
+                margin-bottom: auto;
+                transition: all .2s ease-in-out;
+            }
+            &:focus, &:active{
+                outline: none;
+                text-decoration: none;
+            }
+            &:hover{
+                background: #E5E5EB;
+                svg{
+                    fill: #86868B;
+                }
+            }
+        }
+        &__list{
+            flex: 0 0 calc(100% - 80px);
+            max-width: calc(100% - 80px);
+        }
         &__carousel{
+            display: flex;
+            justify-content: space-between;
             .smc-scrollbar{
+                position: absolute;
+                bottom: -15px;
+                left: 0;
                 display: block;
             }
         }
@@ -532,6 +597,7 @@ footer{
     margin-top: 34px;
     &__caption{
         display: flex;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 15px;
         svg{
@@ -539,6 +605,14 @@ footer{
             width: 18px;
             height: 12px;
             margin-right: 10px;
+        }
+        .i{
+            display: flex;
+            align-items: center;
+        }
+        a{
+            color: #564dba;
+            text-decoration: none;
         }
     }
     &__label{
@@ -581,7 +655,8 @@ footer{
     }
 }
 
-.cg-range{    
+.cg-range{ 
+    overflow: hidden;   
     &__actions{       
         position: relative;
         height: 17px;
@@ -867,8 +942,9 @@ footer{
         position: relative;
         &._new{
             background: #FF3232;
-            padding: 5px 10px;
+            padding: 5px 9px;
             border-radius: 9px;
+            font-size: 24px;
             display: flex;
             align-items: center;
             color: #fff;

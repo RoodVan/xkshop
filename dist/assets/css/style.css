@@ -1392,6 +1392,13 @@ span.btn {
     padding-right: 100px;
 }
 
+@media only screen and (max-width: 1860px) {
+    .container {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
 @media only screen and (max-width: 1720px) {
     .container {
         padding-left: 30px;
@@ -1677,6 +1684,11 @@ footer {
     height: 19px;
 }
 
+.mobile-hamburger svg.ic-x {
+    width: 16px;
+    height: 16px;
+}
+
 @media only screen and (max-width: 1024px) {
     .mobile-hamburger {
         display: -webkit-box;
@@ -1951,7 +1963,7 @@ footer {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    min-width: 200px;
+    min-width: 190px;
 }
 
 .sm-card__caption {
@@ -2047,6 +2059,8 @@ footer {
     width: 9px;
     height: 16px;
     fill: #BCBCC5;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .sm-card__prevbtn:focus, .sm-card__prevbtn:active, .sm-card__nextbtn:focus, .sm-card__nextbtn:active {
@@ -2055,25 +2069,118 @@ footer {
 }
 
 .sm-card__prevbtn:hover, .sm-card__nextbtn:hover {
-    background: rgba(188, 188, 197, 0.4);
+    background: #E5E5EB;
+}
+
+.sm-card__prevbtn:hover svg, .sm-card__nextbtn:hover svg {
+    fill: #86868B;
 }
 
 .sm-card__prevbtn {
-    left: -15px;
+    left: -23px;
     padding-right: 1px;
 }
 
 .sm-card__nextbtn {
-    right: -15px;
+    right: -23px;
     padding-left: 1px;
 }
 
+.sm-card__mobile-nextbtn {
+    display: none;
+    outline: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    z-index: 2;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
 @media only screen and (max-width: 768px) {
+    .sm-card {
+        width: 200px;
+    }
+
     .sm-card__prevbtn, .sm-card__nextbtn {
         display: none;
     }
 
+    .sm-card__mobile-nextbtn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 70px;
+        flex: 0 0 70px;
+        max-width: 70px;
+        background: #F5F5F7;
+        border-radius: 30px;
+        position: relative;
+    }
+
+    .sm-card__mobile-nextbtn svg {
+        width: 12px;
+        height: 19px;
+        fill: #BCBCC5;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+    }
+
+    .sm-card__mobile-nextbtn:focus, .sm-card__mobile-nextbtn:active {
+        outline: none;
+        text-decoration: none;
+    }
+
+    .sm-card__mobile-nextbtn:hover {
+        background: #E5E5EB;
+    }
+
+    .sm-card__mobile-nextbtn:hover svg {
+        fill: #86868B;
+    }
+
+    .sm-card__list {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(100% - 80px);
+        flex: 0 0 calc(100% - 80px);
+        max-width: calc(100% - 80px);
+    }
+
+    .sm-card__carousel {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
     .sm-card__carousel .smc-scrollbar {
+        position: absolute;
+        bottom: -15px;
+        left: 0;
         display: block;
     }
 }
@@ -2105,6 +2212,9 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -2116,6 +2226,20 @@ footer {
     width: 18px;
     height: 12px;
     margin-right: 10px;
+}
+
+.cgfilters__caption .i {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.cgfilters__caption a {
+    color: #564dba;
+    text-decoration: none;
 }
 
 .cgfilters__label {
@@ -2166,6 +2290,10 @@ footer {
         -ms-flex-preferred-size: 20px;
         flex-basis: 20px;
     }
+}
+
+.cg-range {
+    overflow: hidden;
 }
 
 .cg-range__actions {
@@ -2547,8 +2675,9 @@ footer {
 
 .bg-cards__price._new {
     background: #FF3232;
-    padding: 5px 10px;
+    padding: 5px 9px;
     border-radius: 9px;
+    font-size: 24px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -104,6 +104,7 @@
 
 })();
 
+
 // Add Card
 function addCard(el) {
     let qty = $(el).closest('.bg-cards__foot').find('[data-count]').val();
@@ -113,4 +114,10 @@ function addCard(el) {
 }
 function closeCard() {
     $('.basket').removeClass('basket--show');
+}
+
+
+// Reset Filters
+function filtersReset() {
+    $('.cgfilters').find('.multi-select-selected').trigger('click');
 }
