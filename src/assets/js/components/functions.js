@@ -71,7 +71,6 @@
                     parseInt(rangeInputvalue[1].value);
     
                 let diff = maxVal - minVal
-                
                 // Check if the price gap is exceeded
                 if (diff < priceGap) {
                 
@@ -119,5 +118,21 @@ function closeCard() {
 
 // Reset Filters
 function filtersReset() {
+    // multi selects
     $('.cgfilters').find('.multi-select-selected').trigger('click');
+
+    // stock
+    $('.cgfilters__checkbox input').prop('checked', false);
+
+    // range input
+    const rangevalue = document.querySelector(".cg-range__sliderin");
+    const rangeInputvalue = document.querySelectorAll(".cg-range__itms input");
+    const priceInputvalue = document.querySelectorAll(".cg-range__inputs input");
+    rangeInputvalue[0].value = rangeInputvalue[0].min || 0;
+    rangeInputvalue[1].value = rangeInputvalue[1].max || 10000;
+    priceInputvalue[0].value = rangeInputvalue[0].value;
+    priceInputvalue[1].value = rangeInputvalue[1].value;
+
+    rangevalue.style.left = `${(parseInt(rangeInputvalue[0].value) / rangeInputvalue[0].max) * 100}%`;
+    rangevalue.style.right = `${100 - (parseInt(rangeInputvalue[1].value) / rangeInputvalue[1].max) * 100}%`;
 }

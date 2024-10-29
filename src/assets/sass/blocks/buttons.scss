@@ -32,11 +32,18 @@
 
 	&--black{
 		background: #221F20;
-		&:hover{
-			background: #454344;
+		@media (hover: hover) {
+			&:hover{
+				background: #454344;
+			}
 		}
 		&:disabled, &.disabled{
 			background: #CACACA;
+		}
+		@media (hover: none) {
+			&:active{
+				background: #454344;
+			}
 		}
 	}
 
@@ -45,8 +52,15 @@
 		border-radius: 15px;
 		color: #221F20;
 		background: transparent;
-		&:hover{
-			background: #F5F5F7;
+		@media (hover: hover) {
+			&:hover{
+				background: #F5F5F7;
+			}
+		}
+		@media (hover: none) {
+			&:active{
+				background: #F5F5F7;
+			}
 		}
 	}
 
@@ -67,8 +81,15 @@
 			height: 14px;
 			margin-right: 15px;
 		}
-		&:hover{
-			background: #1AA4E9;
+		@media (hover: hover) {
+			&:hover{
+				background: #1AA4E9;
+			}
+		}
+		@media (hover: none) {
+			&:active{
+				background: #1AA4E9;
+			}
 		}
 	}
 
@@ -76,9 +97,17 @@
 		background: #7FFF6A;
 		border-radius: 15px;
 		color: #1A4108;
-		&:hover{
-			background: #70E366;
-			color: #1A4108;
+		@media (hover: hover) {
+			&:hover{
+				background: #70E366;
+				color: #1A4108;
+			}
+		}
+		@media (hover: none) {
+			&:active{
+				background: #70E366;
+				color: #1A4108;
+			}
 		}
 	}
 
@@ -86,8 +115,15 @@
 		background: #FF3232;
 		border-radius: 15px;
 		color: #E8E8E8;
-		&:hover{
-			background: #D61D1D;
+		@media (hover: hover) {
+			&:hover{
+				background: #D61D1D;
+			}
+		}
+		@media (hover: none) {
+			&:active{
+				background: #D61D1D;
+			}
 		}
 	}
 
@@ -118,8 +154,15 @@
 			outline: none;
 			text-decoration: none;
 		}
-		&:hover{
-			background: #D8D8D8;
+		@media (hover: hover) {
+			&:hover{
+				background: #D8D8D8;
+			}
+		}
+		@media (hover: none) {
+			&:active{
+				background: #D8D8D8;
+			}
 		}
 	}
 }

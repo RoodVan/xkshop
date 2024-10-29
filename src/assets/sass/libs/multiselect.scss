@@ -87,8 +87,8 @@
     background: #b2b6b9;
   }
   .multi-select .multi-select-options .multi-select-option, .multi-select .multi-select-options .multi-select-all {
-    padding: 4px 20px;
-    height: 42px;
+    padding: 4px 15px;
+    height: 44px;
   }
   .multi-select .multi-select-options .multi-select-option .multi-select-option-radio, .multi-select .multi-select-options .multi-select-all .multi-select-option-radio {
     margin-right: 10px;
@@ -111,6 +111,7 @@
     font-size: 16px;
     line-height: 20px;
     color: #86868B;
+    transition: all .2s ease;
   }
   .multi-select .multi-select-options .multi-select-option.multi-select-selected .multi-select-option-radio, .multi-select .multi-select-options .multi-select-all.multi-select-selected .multi-select-option-radio {
     border-color: #221F20;
@@ -128,7 +129,7 @@
     color: #221F20;
   }
   .multi-select .multi-select-options .multi-select-option:hover, .multi-select .multi-select-options .multi-select-option:active, .multi-select .multi-select-options .multi-select-all:hover, .multi-select .multi-select-options .multi-select-all:active {
-    background-color: #f3f4f7;
+    background: #fff;
   }
   .multi-select .multi-select-options .multi-select-all {
     border-bottom: 1px solid #f1f3f5;
@@ -158,4 +159,16 @@
     width: 100%;
     font-size: 16px;
     color: #212529;
+  }
+
+  .multi-select .multi-select-option{
+    margin-right: 4px;
+    border-radius: 9px;
+    width: auto;
+    transition: all .2s ease;
+    &:hover{
+      .multi-select-option-text{
+        color: #454344;
+      }
+    }
   }

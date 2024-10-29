@@ -38,13 +38,20 @@ $(function(){
         const $prevBtn = $carousel.closest('.sm-card__carousel').find('.sm-card__prevbtn');
         const $nextBtn = $carousel.closest('.sm-card__carousel').find('.sm-card__nextbtn');
         const $scrollBar = $carousel.closest('.sm-card__carousel').find('.smc-scroll'); // for mobile
-        const $nextBtnMobile = $carousel.closest('.sm-card__carousel').find('.sm-card__mobile-nextbtn');
         let prevClicked = false;
 
         $carousel.on('initialized.owl.carousel', function(e) {
             let perPage = e.page.size;
             let itemCount = $carousel.find('.sm-card').length - (perPage - 1);
-            let carouselWidth = $carousel.closest('.sm-card__list').width();
+            let carouselWidth = $carousel.closest('.sm-card__list').outerWidth(true);
+            let barWidth = carouselWidth / itemCount;
+            $scrollBar.css('width', barWidth+'px');
+        });
+
+        $carousel.on('resized.owl.carousel', function(e) {
+            let perPage = e.page.size;
+            let itemCount = $carousel.find('.sm-card').length - (perPage - 1);
+            let carouselWidth = $carousel.closest('.sm-card__list').outerWidth(true);
             let barWidth = carouselWidth / itemCount;
             $scrollBar.css('width', barWidth+'px');
         });
@@ -53,15 +60,23 @@ $(function(){
             nav: false,
             loop: false,
             dots: false,
-            drag: true,
+            drag: false,
             mouseDrag: false,
+            rewind: true,
             responsive: {
                 0: {
                     margin: 10,
-                    autoWidth: true
+                    autoWidth: true,
+                    rewind: false,
                 },
-                768: {
+                500: {
                     item: 2,
+                    margin: 10,
+                    autoWidth: true,
+                    rewind: false,
+                },
+                721: {
+                    item: 3,
                     margin: 20
                 },
                 1200: {
@@ -75,24 +90,6 @@ $(function(){
                 1700: {
                     items: 4,
                     margin: 40
-                }
-            },
-            onTranslated: function(event) {
-                let totalItems = event.item.count;  
-                let currentItem = event.item.index;
-                let visibleItems = event.page.size;
-                // Next
-                if (currentItem >= totalItems - visibleItems) {
-                    $nextBtn.one('click', function() {
-                    $carousel.trigger('to.owl.carousel', [0, 300]);
-                  });
-                }
-                // Previous
-                if (currentItem === 0) {
-                    $prevBtn.one('click', function() {
-                        $carousel.trigger('to.owl.carousel', [totalItems - 1, 300]);
-                        prevClicked = true;
-                    });
                 }
             }
         });
@@ -118,27 +115,24 @@ $(function(){
             $scrollBar.animate({left: barPosition},200);
         });
 
-        $nextBtnMobile.on('click', function(e) {
-            let totalItems = $carousel.find('.owl-item').length;
-            let currentIndex = $carousel.find('.owl-item.active').index();
-            let visibleItems = $carousel.find('.owl-item.active').length;
-            let wWidth = $(window).width();
-            let bxWidth = $('.sm-card__list').width();
-            let itWidthActive = 200 * visibleItems;
-            totalItems = bxWidth < itWidthActive ? totalItems + 1 : totalItems;
-            console.log(itWidthActive, bxWidth, currentIndex,totalItems - visibleItems, currentIndex <= totalItems - visibleItems);
-            if (currentIndex < totalItems - visibleItems) {
-               e.preventDefault();
+        $carousel.on('dragged.owl.carousel', function(e) {
+            let currentIndex = e.item.index;
+            let itemCount = e.item.count - 1;
+            let carouselWidth = $carousel.closest('.sm-card__list').outerWidth(true);
+            let elementWidth = $carousel.find('.owl-item').outerWidth(true);
+            let activeItemsLength = $carousel.find('.owl-item.active').length - 1;
+            
+            let barWidth = carouselWidth / (itemCount + 1); 
+        
+            let barPosition = barWidth * currentIndex; 
+            
+            if (currentIndex + activeItemsLength >= itemCount) {
+                console.log($carousel.find('.sm-card.cat-link').outerWidth(true));
+                barPosition = barPosition + ($carousel.find('.sm-card.cat-link').outerWidth(true) - barWidth);
+                barPosition = carouselWidth - barWidth;
             }
-            $carousel.trigger('next.owl.carousel');
-            let barPosition = $scrollBar.width() * currentIndex;
-            $scrollBar.animate({left: barPosition},200);
-        });
-
-        $carousel.on('dragged.owl.carousel', function(e){
-            console.log(e.item.index);
-            let barPosition = $scrollBar.width() * e.item.index;
-            $scrollBar.animate({left: barPosition},200);
+        
+            $scrollBar.animate({ left: barPosition }, 200);
         });
 
         $scrollBar.on('touchstart', function(event) {
@@ -160,15 +154,15 @@ $(function(){
 
                 $scrollBar.css('left', newLeft + 'px');
 
-                // Вычисляем позицию для карусели
                 let scrollPos = Math.round(newLeft / $scrollBar.width());
                 $carousel.trigger('to.owl.carousel', scrollPos);
 
-                event.preventDefault(); // Предотвращаем стандартное поведение
+                event.preventDefault();
             }
         });
 
         $scrollBar.on('touchend', function() {
+            console.log('touchend');
             isDragging = false;
         });
     });

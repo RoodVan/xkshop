@@ -106,3 +106,32 @@
     }
 
 }
+
+
+.lang-switch{
+    position: relative;
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    flex: 0 0 103px;
+    width: 103px;
+    height: 41px;
+    background: #F5F5F7;
+    border-radius: 8px;
+    padding: 5px;
+    
+    input{
+        display: none;
+    }
+}
+.lang-slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
