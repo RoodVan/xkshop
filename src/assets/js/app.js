@@ -127,6 +127,15 @@ $(function(){
                 let barWidth = carouselWidth / itemCount;
                 $scrollBar.css('width', barWidth + 'px');
             },
+            onTranslated: function(e) {
+                toggleNewItemInCards($carousel, categoryLink);
+    
+                let perPage = e.page.size;
+                let itemCount = $carousel.find('.sm-card').length - (perPage - 1);
+                let carouselWidth = $carousel.closest('.sm-card__list').outerWidth(true);
+                let barWidth = carouselWidth / itemCount;
+                $scrollBar.css('width', barWidth + 'px');
+            },
             onResized: function(e) {
                 toggleNewItemInCards($carousel, categoryLink);
     
@@ -180,7 +189,8 @@ $(function(){
         });
 
         $scrollBar.on('touchstart', function(event) {
-            var touch = event.originalEvent.touches[0];
+            event.stopPropagation();
+            const touch = event.originalEvent.touches[0];
             startX = touch.pageX;
             initialLeft = $scrollBar.position().left;
             isDragging = true;
@@ -188,6 +198,7 @@ $(function(){
         });
 
         $scrollBar.on('touchmove', function(event) {
+            event.stopPropagation();
             if (isDragging) {
                 var touch = event.originalEvent.touches[0];
                 var deltaX = touch.pageX - startX;
