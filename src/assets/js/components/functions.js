@@ -110,9 +110,11 @@ function addCard(el) {
     if(!qty || qty <= 0) return;
 
     $('.basket').addClass('basket--show');
+    $('.livechat-link').css('bottom', `${$('.basket').outerHeight() + 20}px`);
 }
 function closeCard() {
     $('.basket').removeClass('basket--show');
+    $('.livechat-link').removeAttr('style');
 }
 
 
