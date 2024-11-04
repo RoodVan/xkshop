@@ -1764,6 +1764,10 @@ footer {
     color: #221F20;
 }
 
+.menu .ub {
+    display: none;
+}
+
 @media only screen and (max-width: 1400px) {
     .menu__item {
         margin-left: 40px;
@@ -1845,9 +1849,29 @@ footer {
         height: 50px;
     }
 
-    .menu__link:hover {
+    .menu__link:active {
         background: #E8E8E8;
         border: 1px solid #BCBCC5;
+    }
+
+    .menu .ub {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-left: 0;
+        padding-left: 0;
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+        order: -1;
+    }
+
+    .menu .ub .menu__link {
+        color: #E8E8E8;
+        background: #221F20;
+    }
+
+    .menu .ub .menu__link:active {
+        background: #454344;
     }
 
     .menu .lang {
@@ -1931,23 +1955,29 @@ footer {
     }
 
     .ubox .menu__link {
-        color: #E8E8E8;
-        background: #221F20;
+        font-weight: 400;
         height: 41px;
-        border-radius: 8px;
-        padding: 0 14px;
+        padding: 0;
+        background: none;
+        border: none;
+    }
+
+    .ubox .menu__link:hover {
+        color: #86868B;
     }
 }
 
 @media only screen and (max-width: 1024px) and (hover: hover) {
     .ubox .menu__link:hover {
-        background: #454344;
+        background: none;
+        color: #221F20;
     }
 }
 
 @media only screen and (max-width: 1024px) and (hover: none) {
     .ubox .menu__link:active {
-        background: #454344;
+        background: none;
+        color: #221F20;
     }
 }
 
@@ -1972,8 +2002,8 @@ footer {
 }
 
 .mobile-hamburger svg.ic-x {
-    width: 13px;
-    height: 11px;
+    width: 15px;
+    height: 15px;
 }
 
 @media only screen and (max-width: 1024px) {
