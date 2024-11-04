@@ -23,12 +23,6 @@ $(function(){
         let xlink = $('body').hasClass('menu--open') ? 'ic-x' : 'ic-hamburger';
         $('.mobile-hamburger use').attr('xlink:href', `#${xlink}`);
         $('.mobile-hamburger svg').attr('class', xlink);
-
-        // if($('.menu').hasClass('menu--open')) {
-        //     $('body').addClass('overflow-hidden');
-        // } else {
-        //     $('body').removeClass('overflow-hidden');
-        // }
     });
 
     // Live chat
@@ -245,11 +239,9 @@ $(function(){
 
             maskedInput.on('accept', function () {
                 let value = parseInt(maskedInput.value, 10);
-                console.log(value)
-                // Принудительно устанавливаем максимум или минимум
                 if (value > 99) {
                   maskedInput.value = '99';
-                } else if (value < 1 && maskedInput.value !== '') { // Проверка, чтобы значение не было пустым
+                } else if (value < 1 || maskedInput.value == '') {
                   maskedInput.value = '1';
                 }
             });
@@ -299,7 +291,6 @@ $(function(){
             ($inpVal.val() > 1 && $btnMin.prop('disabled')) && $btnMin.prop('disabled', false);
 
             ($inpVal.val() >= 99) && $btnPls.prop('disabled', true);
-            ($inpVal.val() >= 99) && $inpVal.val(99);
             ($inpVal.val() < 99 && $btnPls.prop('disabled')) && $btnPls.prop('disabled', false);
         });
     });
