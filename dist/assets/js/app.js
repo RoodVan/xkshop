@@ -533,16 +533,16 @@ $(function(){
     // Mobile menu
     $('.mobile-hamburger').on('click', (e) => {
         e.preventDefault();
-        $('.menu').toggleClass('menu--open');
-        let xlink = $('.menu').hasClass('menu--open') ? 'ic-x' : 'ic-hamburger';
+        $('body').toggleClass('menu--open');
+        let xlink = $('body').hasClass('menu--open') ? 'ic-x' : 'ic-hamburger';
         $('.mobile-hamburger use').attr('xlink:href', `#${xlink}`);
         $('.mobile-hamburger svg').attr('class', xlink);
 
-        if($('.menu').hasClass('menu--open')) {
-            $('body').addClass('overflow-hidden');
-        } else {
-            $('body').removeClass('overflow-hidden');
-        }
+        // if($('.menu').hasClass('menu--open')) {
+        //     $('body').addClass('overflow-hidden');
+        // } else {
+        //     $('body').removeClass('overflow-hidden');
+        // }
     });
 
     // Live chat
@@ -559,6 +559,9 @@ $(function(){
         const $searchDropdown = $('.search__dropdown');
         if( $inputSearch.val().length < 3 ) {
             $searchDropdown.is(':visible') && $searchDropdown.fadeOut(200);
+            return;
+        }
+        if( $inputSearch.val().length > 50 ) {
             return;
         }
         
@@ -747,11 +750,29 @@ $(function(){
     }
     if (document.querySelector('[data-isnumber-100]')) {
         const dataNumber100 = document.querySelectorAll('[data-isnumber-100]');
+        const maskOptions = {
+            mask: Number,
+            lazy: false
+        };
         for (let i = 0; i < dataNumber100.length; i++) {
-            IMask(dataNumber100[i], {
-                mask: Number,
-                min: 1,
-                max: 99
+            const maskedInput = IMask(dataNumber100[i], maskOptions);
+
+            maskedInput.on('accept', function () {
+                let value = parseInt(maskedInput.value, 10);
+                console.log(value)
+                // Принудительно устанавливаем максимум или минимум
+                if (value > 99) {
+                  maskedInput.value = '99';
+                } else if (value < 1 && maskedInput.value !== '') { // Проверка, чтобы значение не было пустым
+                  maskedInput.value = '1';
+                }
+            });
+
+            dataNumber100[i].addEventListener('blur', () => {
+                let value = parseInt(dataNumber100[i].value, 10);
+                if (value > 99) value = 99;
+                else if (value < 1) value = 1;
+                dataNumber100[i].value = value;
             });
         }
     }
@@ -792,6 +813,7 @@ $(function(){
             ($inpVal.val() > 1 && $btnMin.prop('disabled')) && $btnMin.prop('disabled', false);
 
             ($inpVal.val() >= 99) && $btnPls.prop('disabled', true);
+            ($inpVal.val() >= 99) && $inpVal.val(99);
             ($inpVal.val() < 99 && $btnPls.prop('disabled')) && $btnPls.prop('disabled', false);
         });
     });
