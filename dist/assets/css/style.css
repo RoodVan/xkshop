@@ -1488,6 +1488,10 @@ span.btn {
 }
 
 @media only screen and (max-width: 1024px) {
+    body.menu--open {
+        overflow: hidden;
+    }
+
     body.menu--open .livechat-link {
         display: -webkit-box;
         display: -ms-flexbox;
