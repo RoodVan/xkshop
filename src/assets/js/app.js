@@ -312,4 +312,16 @@ $(function(){
         duration: 200
     });
 
+
+    // Timers
+    if($('.js-stimer').length) {
+        shortTimer(15, '.js-stimer', () => console.log('Finish timer!'));
+    }
+
+    if($('.js-offline-timer').length) {
+        const now = new Date();
+        now.setHours(now.getHours() + 7);
+        xtimer('.js-offline-timer', now.toISOString(), () => console.log("Finish Timer!"));
+    }
+
 });

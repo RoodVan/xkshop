@@ -615,6 +615,20 @@ footer{
         font-weight: 500;
         font-size: 20px;
     }
+    &--df{
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 38px;
+        color: #221F20;
+        margin-bottom: 34px;
+    }
+    @media only screen and (max-width: 1024px){
+        &--df{
+            font-size: 24px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .sm-card{
@@ -929,7 +943,7 @@ footer{
             top: -5px;
             pointer-events: none;
             cursor: pointer;
-            -webkit-appearance: none;
+            appearance: none;
             &::-webkit-outer-spin-button,
             &::-webkit-inner-spin-button {
                 -webkit-appearance: none;
@@ -1641,3 +1655,7 @@ footer{
         right: 20px;
     }
   }
+
+
+  /* Inner pages styles */
+  @import "./inner";
