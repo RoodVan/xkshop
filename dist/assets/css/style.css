@@ -5415,17 +5415,10 @@ footer {
     padding-right: 10rem;
 }
 
-@media only screen and (max-width: 1860px) {
+@media only screen and (max-width: 1280px) {
     .pbuy .container {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-}
-
-@media only screen and (max-width: 1720px) {
-    .pbuy .container {
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
     }
 }
 
@@ -5485,18 +5478,6 @@ footer {
 @media only screen and (max-width: 1920px) {
     .pbuy.livechat-link {
         right: 10rem;
-    }
-}
-
-@media only screen and (max-width: 1860px) {
-    .pbuy.livechat-link {
-        right: 5rem;
-    }
-}
-
-@media only screen and (max-width: 1720px) {
-    .pbuy.livechat-link {
-        right: 3rem;
     }
 }
 

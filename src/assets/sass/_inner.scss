@@ -1176,13 +1176,13 @@
     .container{
         padding-left: 10rem;
         padding-right: 10rem;
-        @media only screen and (max-width: 1860px){
-            padding-left: 5rem;
-            padding-right: 5rem;
-        }
-        @media only screen and (max-width: 1720px){
-            padding-left: 3rem;
-            padding-right: 3rem;
+        // @media only screen and (max-width: 1860px){
+        //     padding-left: 5rem;
+        //     padding-right: 5rem;
+        // }
+        @media only screen and (max-width: 1280px){
+            padding-left: 4rem;
+            padding-right: 4rem;
         }
         @media only screen and (max-width: 1024px){
             max-width: 760px;
@@ -1225,12 +1225,12 @@
         @media only screen and (max-width: 1920px){
             right: 10rem;
         }
-        @media only screen and (max-width: 1860px){
-            right: 5rem;
-        }
-        @media only screen and (max-width: 1720px){
-            right: 3rem;
-        }
+        // @media only screen and (max-width: 1860px){
+        //     right: 5rem;
+        // }
+        // @media only screen and (max-width: 1720px){
+        //     right: 3rem;
+        // }
         @media only screen and (max-width: 1024px){
             display: none;
             background: url('data:image/svg+xml,<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M33 0.5H19C8.78273 0.5 0.5 8.78273 0.5 19V26.9062C0.5 37.1235 8.78273 45.4062 19 45.4062H40.6137C44.8428 45.4062 48.8224 47.291 51.5 50.4971V41.8438V19C51.5 8.78273 43.2173 0.5 33 0.5Z" fill="%23F5F5F7" stroke="%23E8E8E8"/></svg>');
