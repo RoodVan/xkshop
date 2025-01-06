@@ -5474,7 +5474,7 @@ footer {
 
 @media (hover: hover) {
     .pbuy.livechat-link:hover {
-        background: url('data:image/svg+xml,<svg width="73" height="72" viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M73 19C73 8.50659 64.4934 0 54 0H19C8.50659 0 0 8.50659 0 19V45.5C0 55.9934 8.50659 64.5 19 64.5H60.5074C65.1884 64.5 69.5596 66.8394 72.1561 70.7342L73 72V59.5V19Z" fill="%23221F20"/></svg>');
+        background: url('data:image/svg+xml,<svg viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M73 19C73 8.50659 64.4934 0 54 0H19C8.50659 0 0 8.50659 0 19V45.5C0 55.9934 8.50659 64.5 19 64.5H60.5074C65.1884 64.5 69.5596 66.8394 72.1561 70.7342L73 72V59.5V19Z" fill="%23221F20"/></svg>');
     }
 
     .pbuy.livechat-link:hover svg {
