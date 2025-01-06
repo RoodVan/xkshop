@@ -527,6 +527,107 @@ function filtersReset() {
 }
 
 
+// Countdown
+function xtimer(id, deadline, cb) {
+
+	const addZero = (num) => num <= 9 ? `0${num}` : num;
+	
+	function timeRemaining(endtime) {
+		const t = Date.parse(endtime) - Date.parse(new Date()),
+			seconds = Math.floor((t / 1000) % 60),
+			minutes = Math.floor((t / 1000 / 60) % 60),
+			hours = Math.floor((t / (1000 * 60 * 60)) % 24),
+			//hours   = Math.floor( (t/(1000 * 60 * 60))),
+			days = Math.floor(t / (1000 * 60 * 60 * 24));
+
+		return {
+			'total': t,
+			'days': days,
+			'hours': hours,
+			'minutes': minutes,
+			'seconds': seconds
+		}
+	}
+
+	function setClock(selector, endtime) {
+		const timer = document.querySelector(selector),
+			days = timer.querySelector("[data-days]") || '',
+			hours = timer.querySelector("[data-hours]") || '',
+			minutes = timer.querySelector("[data-minutes]") || '',
+			seconds = timer.querySelector("[data-seconds]") || '',
+			timerInterval = setInterval(updateClock, 1000);
+
+		updateClock();
+
+		function updateClock() {
+			const t = timeRemaining(endtime);
+
+			if (days) {
+				days.textContent = addZero(t.days);
+			}
+			if (hours) {
+				hours.textContent = addZero(t.hours);
+			}
+			if (minutes) {
+				minutes.textContent = addZero(t.minutes);
+			}
+			if (seconds) {
+				seconds.textContent = addZero(t.seconds);
+			}
+
+			if (t.total <= 0) {
+				if (days) {
+					days.textContent = "00";
+				}
+				if (hours) {
+					hours.textContent = "00";
+				}
+				if (minutes) {
+					minutes.textContent = "00";
+				}
+				if (seconds) {
+					seconds.textContent = "00";
+				}
+
+				clearInterval(timerInterval);
+
+				if (cb && typeof cb === 'function') {
+					cb();
+				}
+			}
+
+		}
+
+	}
+
+	setClock(id, deadline);
+}
+
+
+// Short Countdown
+function shortTimer(durationInSeconds, element, cb) {
+    let remainingTime = durationInSeconds;
+    const wrap = document.querySelector(element);
+
+    const timerInterval = setInterval(() => {
+        if (remainingTime < 0) {
+            clearInterval(timerInterval);
+            (cb && typeof cb === 'function') && cb();
+        } else {
+            // Вычисляем минуты и секунды
+            const minutes = Math.floor(remainingTime / 60);
+            const seconds = remainingTime % 60;
+
+            // Форматируем в виде MM:SS
+            const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            wrap.innerHTML = formattedTime;
+
+            remainingTime--;
+        }
+    }, 1000);
+}
+
+
 /* Onload DOM                                        
 --------------------------------------------------------*/
 $(function(){
@@ -825,5 +926,17 @@ $(function(){
         animation: 'scale',
         duration: 200
     });
+
+
+    // Timers
+    if($('.js-stimer').length) {
+        shortTimer(15, '.js-stimer', () => console.log('Finish timer!'));
+    }
+
+    if($('.js-offline-timer').length) {
+        const now = new Date();
+        now.setHours(now.getHours() + 7);
+        xtimer('.js-offline-timer', now.toISOString(), () => console.log("Finish Timer!"));
+    }
 
 });

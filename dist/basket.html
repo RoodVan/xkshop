@@ -122,9 +122,6 @@
                     <li class="menu__item hide-mobile"><a href="#" class="menu__link">Главная</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">FAQ</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-                    <li class="menu__item ub">
-                        <a href="#" class="menu__link">Авторизация</a>
-                    </li>
                 </ul>
                 <div class="lang lang--mobile">
                     <label class="lang__switch">
@@ -137,9 +134,9 @@
             </nav>
 
             <div class="ubox">
-                <a href="#" class="menu__link">Авторизация</a>
+                <span class="ubox__id"><b>ID</b> <span>548429265</span></span>
             </div>
-            
+
             <div class="lang">
                 <label class="lang__switch">
                     <input type="checkbox">
@@ -154,293 +151,153 @@
     <main>
         <div class="container main-wrapper">
             <div class="main-middle">
-                <section class="section-sm-cards">
-                    <div class="sm-card__caption">
-                        <h1 class="title title--sm">Open Ups</h1>
-                        <a href="#">Смотреть все</a>
-                    </div>
+                <div class="main-caption">
+                    <a href="#" class="back-btn">
+                        <svg>
+                            <use xlink:href="#ic-arr-prev"></use>
+                        </svg>
+                    </a>
+                    <h1>Корзина</h1>
+                </div>
+                
+                <table class="table table--basket">
+                    <thead>
+                        <th></th>
+                        <th>Товар</th>
+                        <th>Кол-во</th>
+                        <th>Стоимость</th>
+                        <th>Гарантия</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-close">
+                                <button class="btn btn--close">&nbsp;</button>
+                            </td>
+                            <td class="td-good" data-title="Товар">
+                                <span class="td-good__in">
+                                    <span class="text-overflow">Подарочные карты Google Play</span>
+                                    <span class="dtmark">
+                                        <svg>
+                                            <use xlink:href="#ic-dtmark"></use>
+                                        </svg>
+                                        12
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="td-quantity" data-title="Количество">
+                                <div class="bg-cards__counter">
+                                    <button type="button" class="btn" data-minus>
+                                        <svg><use xlink:href="#ic-minus"></use></svg>
+                                    </button>
+                                    <input type="text" class="inp" value="1" data-isnumber-100 data-count>
+                                    <button type="button" class="btn" data-plus>
+                                        <svg><use xlink:href="#ic-plus"></use></svg>
+                                    </button>
+                                </div>
+                            </td>
+                            <td class="td-price" data-title="Стоимость">199€</td>
+                            <td class="td-guarant" data-title="Гарантия">
+                                <svg class="td-guarant__mob-info" data-tippy-content="Standard info">
+                                    <use xlink:href="#ic-info"></use>
+                                </svg>
+                                <ul class="guarante">
+                                    <li class="guarante__item">
+                                        <span class="guarante__label guarante__label--active">
+                                            <b>Standard</b>
+                                            <svg data-tippy-content="Standard info">
+                                                <use xlink:href="#ic-info"></use>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li class="guarante__item">
+                                        <span class="guarante__label">
+                                            <b>Advanced</b>
+                                            <svg data-tippy-content="Advanced info">
+                                                <use xlink:href="#ic-info"></use>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li class="guarante__item">
+                                        <span class="guarante__label">
+                                            <b>Ultimate</b>
+                                            <svg data-tippy-content="Ultimate info">
+                                                <use xlink:href="#ic-info"></use>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-close">
+                                <button class="btn btn--close">&nbsp;</button>
+                            </td>
+                            <td class="td-good" data-title="Товар">
+                                <span class="td-good__in">
+                                    <span class="text-overflow">Подарочные карты Google Play</span>
+                                    <span class="dtmark">
+                                        <svg>
+                                            <use xlink:href="#ic-dtmark"></use>
+                                        </svg>
+                                        LT
+                                    </span>
+                                </span>
+                            </td>
+                            <td class="td-quantity" data-title="Количество">
+                                <div class="bg-cards__counter">
+                                    <button type="button" class="btn" data-minus>
+                                        <svg><use xlink:href="#ic-minus"></use></svg>
+                                    </button>
+                                    <input type="text" class="inp" value="1" data-isnumber-100 data-count>
+                                    <button type="button" class="btn" data-plus>
+                                        <svg><use xlink:href="#ic-plus"></use></svg>
+                                    </button>
+                                </div>
+                            </td>
+                            <td class="td-price" data-title="Стоимость">199€</td>
+                            <td class="td-guarant" data-title="Гарантия">
+                                <svg class="td-guarant__mob-info" data-tippy-content="Standard info">
+                                    <use xlink:href="#ic-info"></use>
+                                </svg>
+                                <ul class="guarante">
+                                    <li class="guarante__item">
+                                        <span class="guarante__label">
+                                            <b>Standard</b>
+                                            <svg data-tippy-content="Standard info">
+                                                <use xlink:href="#ic-info"></use>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li class="guarante__item">
+                                        <span class="guarante__label guarante__label--active">
+                                            <b>Advanced</b>
+                                            <svg data-tippy-content="Advanced info">
+                                                <use xlink:href="#ic-info"></use>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li class="guarante__item">
+                                        <span class="guarante__label">
+                                            <b>Ultimate</b>
+                                            <svg data-tippy-content="Ultimate info">
+                                                <use xlink:href="#ic-info"></use>
+                                            </svg>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                    <div class="sm-card__carousel" data-category-link="./index-category.html">
-                        <div class="sm-card__list">
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/steam.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Пополнение Steam</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/phub.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Подписка Pornhub</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/origin.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Подписка Origin</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/discord.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Пополнение Steam</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/phub.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Пополнение Steam</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/origin.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Подписка Origin</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/discord.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Пополнение Steam</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ./sm-card__list -->
-                        <button class="sm-card__prevbtn">
-                            <svg>
-                                <use xlink:href="#ic-arr-prev"></use>
-                            </svg>
-                        </button>
-                        <button class="sm-card__nextbtn">
-                            <svg>
-                                <use xlink:href="#ic-arr-next"></use>
-                            </svg>
-                        </button>
-                        <div class="smc-scrollbar">
-                            <div class="smc-scroll"></div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section-sm-cards">
-                    <div class="sm-card__caption">
-                        <h1 class="title title--sm">GFX</h1>
-                        <a href="#">Смотреть все</a>
-                    </div>
-
-                    <div class="sm-card__carousel" data-category-link="./index-category.html">
-                        <div class="sm-card__list">
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/steam.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Пополнение Steam</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/phub.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Подписка Pornhub</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/origin.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Подписка Origin</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/discord.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Пополнение Steam</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/phub.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Пополнение Steam</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/origin.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Подписка Origin</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/discord.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Пополнение Steam</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ./sm-card__list -->
-                        <button class="sm-card__prevbtn">
-                            <svg>
-                                <use xlink:href="#ic-arr-prev"></use>
-                            </svg>
-                        </button>
-                        <button class="sm-card__nextbtn">
-                            <svg>
-                                <use xlink:href="#ic-arr-next"></use>
-                            </svg>
-                        </button>                     
-                        <div class="smc-scrollbar">
-                            <div class="smc-scroll"></div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section-sm-cards">
-                    <div class="sm-card__caption">
-                        <h1 class="title title--sm">Authentic</h1>
-                        <a href="#">Смотреть все</a>
-                    </div>
-
-                    <div class="sm-card__carousel" data-category-link="./index-category.html">
-                        <div class="sm-card__list">
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/steam.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Пополнение Steam</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/phub.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Подписка Pornhub</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/origin.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Подписка Origin</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/discord.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Пополнение Steam</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/phub.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Пополнение Steam</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/origin.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Подписка Origin</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                            <div class="sm-card">
-                                <a href="#" class="abs-link">&nbsp;</a>
-                                <div class="sm-card__img">
-                                    <img src="./assets/img/content/cards/discord.png" alt="">
-                                </div>
-                                <div class="sm-card__props">
-                                    <h2 class="sm-card__title">Пополнение Steam</h2>
-                                    <div class="sm-card__price">199€</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ./sm-card__list -->
-                        <button class="sm-card__prevbtn">
-                            <svg>
-                                <use xlink:href="#ic-arr-prev"></use>
-                            </svg>
-                        </button>
-                        <button class="sm-card__nextbtn">
-                            <svg>
-                                <use xlink:href="#ic-arr-next"></use>
-                            </svg>
-                        </button>
-                        <div class="smc-scrollbar">
-                            <div class="smc-scroll"></div>
-                        </div>
-                    </div>
-                </section>
+                <div class="bst-prop">
+                    <span class="bst-price">597€</span>
+                    <a href="#" class="btn bst-btn btn--black">
+                        <span>Оплатить</span>
+                        <span class="only-mob">597€</span>
+                    </a>
+                </div>
+                
             </div>
             <!-- ./ main-middle -->
 
@@ -456,7 +313,7 @@
                     </div>
                     <div class="usprops__btns">
                         <button type="button" class="btn btn--black">Пополнить</button>
-                        <a href="#" class="btn btn--line">Покупки</a>
+                        <a href="#" class="btn btn--gray">Покупки</a>
                         <a href="#" class="btn btn--tg">
                             <svg>
                                 <use xlink:href="#ic-soc-tg"></use>
