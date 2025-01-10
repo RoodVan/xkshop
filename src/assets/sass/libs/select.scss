@@ -11,15 +11,15 @@
     cursor: pointer;
     position: relative;
     background: #F5F5F7;
-    border-radius: 15px;
-    height: 56px;
-    padding: 0 20px;
+    border-radius: 1.5rem;
+    height: 5.6rem;
+    padding: 0 2rem;
     border: 0;
     outline: none;
     width: 100%;
 
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
     color: #221F20;
     display: flex;
     align-items: center;
@@ -35,9 +35,9 @@
     content: "";
     top: 0;
     bottom: 0;
-    width: 20px;
-    right: 20px;
-    background: url(../img/select-arr.svg) no-repeat center center / 15px auto;
+    width: 1.2rem;
+    right: 1.5rem;
+    background: url(../img/select-arr.svg) no-repeat center center / 1.2rem auto;
     transition: transform .2s ease-in-out;
   }
   
@@ -48,7 +48,7 @@
   
   /* style the items (options), including the selected item: */
   .select-items div{
-    padding: 10px 20px;
+    padding: .6rem 2rem;
     cursor: pointer;
     transition: all .2s ease-in-out;
   }
@@ -57,21 +57,17 @@
   .select-items {
     position: absolute;
     background: #F5F5F7;
-    border-radius: 15px;
-    padding: 20px 0;
+    border-radius: 1.5rem;
+    padding: 1.5rem 0;
     color: #221F20;
     top: 100%;
     left: 0;
     right: 0;
     z-index: 99;
-    margin-top: 1px;
+    margin-top: .1rem;
   }
   
   /* Hide the items when the select box is closed: */
   .select-hide {
     display: none;
-  }
-  
-  .select-items div:hover, .same-as-selected {
-    background-color: rgba(125, 125, 125, 0.1);
   }

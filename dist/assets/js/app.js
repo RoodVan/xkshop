@@ -717,8 +717,8 @@ $(function(){
                 721: {
                     margin: 20
                 },
-                1200: {
-                    items: 3,
+                1024: {
+                    items: 4,
                     margin: 20
                 },
                 1440: {

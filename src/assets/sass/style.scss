@@ -36,15 +36,11 @@ body.menu--open{
 .container{
     max-width: 1920px;
     margin: 0 auto;
-    padding-left: 100px;
-    padding-right: 100px;
-    @media only screen and (max-width: 1860px){
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    @media only screen and (max-width: 1720px){
-        padding-left: 30px;
-        padding-right: 30px;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    @media only screen and (max-width: 1280px){
+        padding-left: 4rem;
+        padding-right: 4rem;
     }
     @media only screen and (max-width: 1024px){
         max-width: 760px;
@@ -78,8 +74,8 @@ footer{
 /* Blocks */
 
 .topline{
-    padding-top: 28px;
-    padding-bottom: 28px;
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
     display: flex;
     align-items: center;
     position: relative;
@@ -92,17 +88,17 @@ footer{
 .search{
     position: relative;
     z-index: 3;
-    height: 56px;
-    flex: 0 1 599px;
-    max-width: 599px;
+    height: 5.6rem;
+    flex: 0 1 59.9rem;
+    max-width: 59.9rem;
     &__inp{
-        padding-left: 60px;
+        padding-left: 6rem;
     }
     &__icon{
-        width: 18px;
-        height: 18px;
+        width: 1.8rem;
+        height: 1.8rem;
         position: absolute;
-        left: 22px;
+        left: 2.2rem;
         top: 0; bottom: 0;
         margin-top: auto;
         margin-bottom: auto;
@@ -111,30 +107,30 @@ footer{
         display: none;
         position: absolute;
         background: #F5F5F7;
-        box-shadow: 0px 0px 45px rgba(47, 47, 47, 0.16);
-        border-radius: 15px;
-        padding: 0 5px;
-        top: 66px;
+        box-shadow: 0px 0px 4.5rem rgba(47, 47, 47, 0.16);
+        border-radius: 1.5rem;
+        padding: 0 .5rem;
+        top: 6.6rem;
         left: 0; right: 0;
     }
     &__list{
         height: 100%;
-        max-height: 430px;
-        margin: 7px 0;
-        padding: 8px 0;
+        max-height: 43rem;
+        margin: .7rem 0;
+        padding: .8rem 0;
         overflow-y: auto;
         overflow-x: hidden;
         scroll-behavior: smooth;
         &::-webkit-scrollbar {
-            width: 4px;
+            width: .4rem;
         }
         &::-webkit-scrollbar-track {
             background: #EBEBEB;
-            border-radius: 4px;
+            border-radius: .4rem;
         }
         &::-webkit-scrollbar-thumb {
             background: #CACACA;
-            border-radius: 4px;
+            border-radius: .4rem;
         }
         &::-webkit-scrollbar-thumb:hover {
             background: #b2b6b9;
@@ -172,7 +168,7 @@ footer{
     &__lab{
         flex: 1 1 auto;
         transition: all .2s;
-        padding: 8px 10px;
+        padding: .8rem 1rem;
         span{
             color: #221F20;
         }
@@ -180,8 +176,8 @@ footer{
     &__caption{
         display: flex;
         align-items: center;
-        font-size: 14px;
-        margin: 15px 10px 10px;
+        font-size: 1.4rem;
+        margin: 1.5rem 1rem 1rem;
         color: #86868B;
     }
     @media only screen and (max-width: 1024px){
@@ -202,9 +198,9 @@ footer{
         align-items: center;
     }
     &__item{
-        margin-left: 70px;
+        margin-left: 7rem;
         &:first-child{
-            margin-left: 60px;
+            margin-left: 6rem;
         }
     }
     &__link{
@@ -220,9 +216,9 @@ footer{
     }
     @media only screen and (max-width: 1400px){
         &__item{
-            margin-left: 40px;
+            margin-left: 4rem;
             &:first-child{
-                margin-left: 40px;
+                margin-left: 4rem;
             }
         }
     }
@@ -307,26 +303,26 @@ footer{
 
 .ubox{
     margin-left: auto;
-    padding-left: 20px;
+    padding-left: 2rem;
     &__id{
         display: flex;
         align-items: center;
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: 500;
         color: #454344;
         b{
-            font-size: 20px;
+            font-size: 2rem;
             font-weight: 400;
             color: #86868B;
-            margin-right: 14px;
+            margin-right: 1.4rem;
         }
     }
     @media only screen and (max-width: 1280px){
         &__id{
-            font-size: 16px;
+            font-size: 1.6rem;
             b{
-                font-size: 18px;
-                margin-right: 10px;
+                font-size: 1.8rem;
+                margin-right: 1rem;
             }
         }
     }
@@ -376,15 +372,15 @@ footer{
 .mobile-hamburger{
     position: absolute;
     z-index: 10;
-    top: 55px; right: 30px;
+    top: 5.5rem; right: 3rem;
     display: none;
     padding: 0;
     svg{
-        width: 19px;
-        height: 19px;
+        width: 1.9rem;
+        height: 1.9rem;
         &.ic-x{
-            width: 15px;
-            height: 15px;
+            width: 1.5rem;
+            height: 1.5rem;
         }
     }
     @media only screen and (max-width: 1024px){
@@ -397,13 +393,13 @@ footer{
 
 .lang{
     user-select: none;
-    margin-left: 35px;
-    flex: 0 0 103px;
-    width: 103px;
-    height: 41px;
+    margin-left: 3.5rem;
+    flex: 0 0 10.3rem;
+    width: 10.3rem;
+    height: 4.1rem;
     background: #F5F5F7;
-    border-radius: 8px;
-    padding: 5px;
+    border-radius: .8rem;
+    padding: .5rem;
     position: relative;
     &__item{
         flex: 0 0 50%;
@@ -411,15 +407,16 @@ footer{
         height: 100%;
         display: flex;
         align-items: center;
-        padding-left: 11px;
+        padding-left: 1.1rem;
         justify-content: start;
         position: relative;
         z-index: 3;
         transition: .4s;
         color: #221F20;
+        font-size: 1.6rem;
         text-transform: uppercase;
         & + .lang__item{
-            padding-left: 14px;
+            padding-left: 1.4rem;
             color: #BCBCC5;
         }
     }
@@ -430,25 +427,25 @@ footer{
         right: 0;
         bottom: 0;
         transition: .4s;
-        height: 41px;
+        height: 4.1rem;
         display: flex;
         align-items: center;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: .5rem;
+        padding-right: .5rem;
         &:before{
             content: '';
             background: #DDDDDD;
-            border-radius: 5px; 
-            width: 44px;
-            height: 31px;
+            border-radius: .5rem; 
+            width: 4.4rem;
+            height: 3.1rem;
             transition: .4s;
         }
     }
     &__switch{
         cursor: pointer;
-        width: 103px;
-        height: 41px;
-        padding: 5px;
+        width: 10.3rem;
+        height: 4.1rem;
+        padding: .5rem;
         position: absolute;
         display: flex;
         align-items: center;
@@ -458,7 +455,7 @@ footer{
         bottom: 0;
         z-index: 2;
         input:checked + .lang__slider:before {
-            transform: translateX(49px);
+            transform: translateX(4.9rem);
         }
         input:checked + .lang__slider + .lang__item {
             color: #BCBCC5;
@@ -487,28 +484,28 @@ footer{
 .main{
     &-wrapper{
         display: flex;
-        margin-top: 50px;
-        padding-bottom: 50px;
+        margin-top: 5rem;
+        padding-bottom: 5rem;
     }
     &-middle{
         flex: 1 0 auto;
-        max-width: calc(100% - 440px);
+        max-width: calc(100% - 44rem);
     }
     &-right{
-        flex: 0 0 400px;
-        max-width: 400px;
-        margin-left: 40px;
+        flex: 0 0 40rem;
+        max-width: 40rem;
+        margin-left: 4rem;
         position: relative;
     }
     @media only screen and (max-width: 1720px){
         &-right{
-            flex: 0 0 350px;
-            max-width: 350px;
-            margin-left: 30px;
+            flex: 0 0 35rem;
+            max-width: 35rem;
+            margin-left: 3rem;
         }
         &-middle{
             flex: 1 0 auto;
-            max-width: calc(100% - 380px);
+            max-width: calc(100% - 38rem);
         }
     }
     @media only screen and (max-width: 1024px){
@@ -539,38 +536,38 @@ footer{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
-        height: 60px;
+        margin-bottom: 2rem;
+        height: 6rem;
         span{
-            font-size: 20px;
-            line-height: 24px;
+            font-size: 2rem;
+            line-height: 2.4rem;
             color: #86868B;
         }
         strong{
             font-weight: 700;
-            font-size: 24px;
-            line-height: 29px;
+            font-size: 2.4rem;
+            line-height: 2.9rem;
             color: #221F20;
         }
     }
     &__deposit{
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
         .im-extra{
             margin-top: auto;
             margin-bottom: auto;
             top: 0; bottom: 0;
-            right: 20px;
+            right: 2rem;
         }
         .inp{
-            padding-right: 90px;
-            height: 60px;
+            padding-right: 9rem;
+            height: 6rem;
         }
     }
     &__btns{
         .btn{
             width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
             &:last-child{
                 margin-bottom: 0;
             }
@@ -579,7 +576,7 @@ footer{
     &--lock{
         background: rgba(255, 255, 255, 0.01);
         filter: blur(7.6px);
-        border-radius: 16px;
+        border-radius: 1.6rem;
         user-select: none;
         pointer-events: none;
     }
@@ -598,14 +595,14 @@ footer{
 .im-extra{
     display: flex;
     align-items: center;
-    padding: 0 9px;
+    padding: 0 .9rem;
     position: absolute;
-    width: 60px;
-    height: 36px;
+    width: 6rem;
+    height: 3.6rem;
     background: #F2E9FF;
-    border-radius: 6px;
+    border-radius: .6rem;
 
-    line-height: 28px;
+    line-height: 2.8rem;
     color: #564DBA;
 }
 
@@ -613,14 +610,14 @@ footer{
     color: #000000;
     &--sm{
         font-weight: 500;
-        font-size: 20px;
+        font-size: 2rem;
     }
     &--df{
         font-weight: 500;
-        font-size: 32px;
-        line-height: 38px;
+        font-size: 3.2rem;
+        line-height: 3.8rem;
         color: #221F20;
-        margin-bottom: 34px;
+        margin-bottom: 3.4rem;
     }
     @media only screen and (max-width: 1024px){
         &--df{
@@ -633,30 +630,30 @@ footer{
 
 .sm-card{
     background: #F5F5F7;
-    border-radius: 43px;
-    padding: 46px 20px 24px;
+    border-radius: 4.3rem;
+    padding: 4.6rem 2rem 2.4rem;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 190px;
+    min-width: 19rem;
     position: relative;
     transition: all .3s;
     @media (hover: hover) {
         &:hover{
-            filter: drop-shadow(0px 0px 12px rgba(47, 47, 47, 0.16));
+            filter: drop-shadow(0px 0px 1.2rem rgba(47, 47, 47, 0.16));
         }
     }
     @media (hover: none) {
         &:active{
-            filter: drop-shadow(0px 0px 9px rgba(47, 47, 47, 0.16));
+            filter: drop-shadow(0px 0px .9rem rgba(47, 47, 47, 0.16));
         }
     }
     &__caption{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
         a{
             color: #564DBA;
         }
@@ -666,24 +663,24 @@ footer{
         height: auto;
     }
     &__props{
-        margin-top: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
+        margin-top: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     &__title{
-        font-size: 16px;
+        font-size: 1.6rem;
         font-weight: 500;
-        line-height: 19px;
+        line-height: 1.9rem;
         color: #86868B;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
     &__price{
-        margin-top: 5px;
+        margin-top: .5rem;
         font-weight: 500;
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 2.4rem;
+        line-height: 2.9rem;
         color: #221F20;
     }
     &__carousel{
@@ -711,8 +708,8 @@ footer{
         margin-bottom: auto;
         padding: 0;
 	
-		width: 46px;
-		height: 46px;
+		width: 4.6rem;
+		height: 4.6rem;
 		border-radius: 50%;
 		background: rgba(188, 188, 197, 0.35);
 		display: flex;
@@ -720,8 +717,8 @@ footer{
 		justify-content: center;
 		transition: .2s ease-in-out;
 		svg{
-			width: 9px;
-			height: 16px;
+			width: .9rem;
+			height: 1.6rem;
 			fill: #BCBCC5;
             transition: all .2s ease-in-out;
 		}
@@ -737,12 +734,12 @@ footer{
 		}
     }
     &__prevbtn{
-        left: -23px;
-        padding-right: 1px;
+        left: -2.3rem;
+        padding-right: .1rem;
     }
     &__nextbtn{
-        right: -23px;
-        padding-left: 1px;
+        right: -2.3rem;
+        padding-left: .1rem;
     }
     &__mobile-nextbtn{
         display: none;
@@ -762,8 +759,8 @@ footer{
         display: none;
 
         svg{
-            width: 12px;
-            height: 19px;
+            width: 1.2rem;
+            height: 1.9rem;
             fill: #BCBCC5;
             position: absolute;
             top: 0; bottom: 0;
@@ -835,32 +832,32 @@ footer{
     display: none;
     position: relative;
     background:  #E8E8E8;
-    height: 2px;
-    margin-top: 15px;
+    height: .2rem;
+    margin-top: 1.5rem;
 }
 .smc-scroll{
     position: absolute;
     background: #221F20;
-    height: 2px;
+    height: .2rem;
     left: 0;
 }
 
 .section-sm-cards{
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
 }
 
 .cgfilters{
-    margin-top: 34px;
+    margin-top: 3.4rem;
     &__caption{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 1.5rem;
         svg{
             fill: #86868B;
-            width: 18px;
-            height: 12px;
-            margin-right: 10px;
+            width: 1.8rem;
+            height: 1.2rem;
+            margin-right: 1rem;
         }
         .i{
             display: flex;
@@ -876,7 +873,7 @@ footer{
     }
     &__group{
         & + .cgfilters__group{
-            margin-top: 10px;
+            margin-top: 1rem;
         }
     }
     &__checkbox{
@@ -884,13 +881,13 @@ footer{
         align-items: center;
     }
     .checkbox-label{
-        margin-left: 10px;
+        margin-left: 1rem;
     }
     .inp{
-        height: 50px;
+        height: 5rem;
     }
     .select-selected{
-        height: 50px;
+        height: 5rem;
     }
     @media only screen and (max-width: 1024px){
         .inp{
@@ -915,16 +912,16 @@ footer{
     overflow: hidden;   
     &__actions{       
         position: relative;
-        height: 17px;
-        margin-top: 27px;
-        margin-bottom: 5px;
+        height: 1.7rem;
+        margin-top: 2.7rem;
+        margin-bottom: .5rem;
     }
     &__sliderout{
         position: relative;
-        height: 4px;
-        top: -4px;
+        height: .4rem;
+        top: -.4rem;
         background: #F5F5F7;
-        border-radius: 5px;
+        border-radius: .5rem;
     }
     &__sliderin{
         position: absolute;
@@ -932,15 +929,15 @@ footer{
         left: 25%;
         right: 15%;
         background: #B2ABFF;
-        border-radius: 5px;
+        border-radius: .5rem;
     }
     &__itms{
         input{
             position: absolute;
             width: 100%;
-            height: 5px;
+            height: .5rem;
             background: none;
-            top: -5px;
+            top: -.5rem;
             pointer-events: none;
             cursor: pointer;
             appearance: none;
@@ -950,8 +947,8 @@ footer{
                 margin: 0;
             }
             &::-webkit-slider-thumb {
-                height: 17px;
-                width: 17px;
+                height: 1.7rem;
+                width: 1.7rem;
                 border-radius: 70%;
                 background: #564DBA;
                 pointer-events: auto;
@@ -965,22 +962,22 @@ footer{
     }
     &__inp{
         position: relative;
-        flex: 0 0 calc(50% - 12px);
-        max-width: calc(50% - 12px);
+        flex: 0 0 calc(50% - 1.2rem);
+        max-width: calc(50% - 1.2rem);
         input{
-            padding-left: 63px;
-            font-size: 18px;
+            padding-left: 6.3rem;
+            font-size: 1.8rem;
         }
         span{
             font-weight: 600;
-            font-size: 20px;
+            font-size: 2rem;
             color: #BCBCC5;
             position: absolute;
             top: 0; bottom: 0;
             left: 0;
             display: flex;
             align-items: center;
-            padding-left: 20px;
+            padding-left: 2rem;
         }
     }
     @media only screen and (max-width: 1024px){
@@ -1003,21 +1000,21 @@ footer{
 
 .inote{
     background: #F2E9FF;
-    border-radius: 15px;
-    padding: 11px 20px;
-    margin-top: 15px;
+    border-radius: 1.5rem;
+    padding: 1.1rem 2rem;
+    margin-top: 1.5rem;
     color: #564DBA;
 }
 
 .main-caption{
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
     line-height: 1.2;
     h1{
         font-weight: 500;
-        font-size: 32px;
-        line-height: 38px;
+        font-size: 3.2rem;
+        line-height: 3.8rem;
         color: #221F20;
     }
     @media only screen and (max-width: 1024px){
@@ -1030,21 +1027,21 @@ footer{
 
 .back-btn{
     display: flex;
-    width: 38px;
-    height: 38px;
-    flex: 0 0 38px;
-    margin-right: 15px;
+    width: 3.8rem;
+    height: 3.8rem;
+    flex: 0 0 3.8rem;
+    margin-right: 1.5rem;
     align-items: center;
     background: #F5F5F7;
-    border-radius: 9px;
-    padding-left: 13px;
+    border-radius: .9rem;
+    padding-left: 1.3rem;
     transition: all .2s ease-in-out;
     &:hover{
         background: #D8D8D8;
     }
     svg{
-        width: 9px;
-        height: 18px;
+        width: .9rem;
+        height: 1.8rem;
         fill: #BCBCC5;
     }
 }
@@ -1052,42 +1049,65 @@ footer{
 .bg-cards{
     display: flex;
     flex-flow: row wrap;
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -2rem;
+    margin-right: -2rem;
     &__col{
         flex: 0 0 33.3333%;
         max-width: 33.3333%;
-        padding: 0 20px 40px;
+        padding: 0 2rem 4rem;
     }
     &__item{
         position: relative;
         background: #F5F5F7;
-        border-radius: 57px;
-        padding-bottom: 45px;
+        border-radius: 5.7rem;
+        padding-bottom: 4.5rem;
         height: 100%;
         display: flex;
         flex-direction: column;
         transition: all .3s;
+        &:hover{
+            .bg-cards__price{
+                ._old{
+                    transform: rotate(15deg) translate(0, -99%);
+                }
+            }
+        }
+    }
+    &__label{
+        position: absolute;
+        width: 7.1rem;
+        height: 5.5rem;
+        background: url(../img/bg-label.svg) no-repeat 0 0 / contain;
+        left: -1.1rem;
+        top: 4.5rem;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        text-align: center;
+        color: #fff;
+        padding-top: 1rem;
+        text-transform: uppercase;
+        & + .bg-cards__discount{
+            top: 9.3rem;
+        }
     }
     &__discount{
         position: absolute;
-        width: 71px;
-        height: 55px;
+        width: 7.1rem;
+        height: 5.5rem;
         background: url(../img/bg-discount.svg) no-repeat 0 0 / contain;
-        left: -11px;
-        top: 45px;
+        left: -1.1rem;
+        top: 4.5rem;
         font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 2rem;
+        line-height: 2.4rem;
         text-align: center;
         color: #fff;
-        padding-top: 7px;
-        
-
+        padding-top: .7rem;
     }
     &__head{
         flex: 0 0 auto;
-        padding: 14px 27px 0;
+        padding: 1.4rem 2.7rem 0;
         img{
             max-width: 100%;
             height: auto;
@@ -1096,17 +1116,17 @@ footer{
             display: flex;
             align-items: center;
             justify-content: center;
-            gap:5px;
-            margin-left: 15px;
-            margin-right: 15px;
+            gap:.5rem;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
             .owl-dot{
-                height: 4px;
-                border-radius: 6px;
+                height: .4rem;
+                border-radius: .6rem;
                 background: #fff;
                 flex-grow: 1;
-                max-width: 80px;
+                max-width: 8rem;
                 &.active{
-                    box-shadow: 0px 1px 2.3px rgba(134, 134, 139, 0.3);
+                    box-shadow: 0px .1rem .23rem rgba(134, 134, 139, 0.3);
                 }
                 &:hover, &:active, &:focus{
                     outline: none;
@@ -1115,19 +1135,19 @@ footer{
         }
     }
     &__body{
-        padding: 0 45px;
-        margin-top: 15px;
+        padding: 0 4.5rem;
+        margin-top: 1.5rem;
         flex: 1 0 auto;
     }
     &__caption{
         display: flex;
         align-items: center;
         font-weight: 500;
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 2rem;
+        line-height: 2.4rem;
         overflow: hidden;
         .cmark{
-            margin-right: 10px;
+            margin-right: 1rem;
         }
         h4{
             white-space: nowrap;
@@ -1136,38 +1156,38 @@ footer{
         }
     }
     &__desc{
-        margin-top: 15px;
+        margin-top: 1.5rem;
         color: #86868B;
     }
     &__stock{
         color: #564DBA;
-        margin-top: 18px;
+        margin-top: 1.8rem;
         &._no{
             color: #FF4747;
         }
     }
     &__props{
-        margin-top: 10px;
+        margin-top: 1rem;
         display: flex;
         align-items: center;
         .mark-info{
-            margin-left: 7px;
+            margin-left: .7rem;
         }
     }
     &__counter{
         display: flex;
         .btn{
             background: #E8E8E8;
-            border-radius: 9px; 
-            width: 40px;
-            height: 40px;
-            flex: 0 0 40px;
+            border-radius: .9rem; 
+            width: 4rem;
+            height: 4rem;
+            flex: 0 0 4rem;
             &:hover{
                 background: #D8D8D8;
             }
             svg{
-                width: 13px;
-                height: 13px;
+                width: 1.3rem;
+                height: 1.3rem;
                 fill: #221F20;
             }
             &:disabled, &.disabled{
@@ -1177,57 +1197,65 @@ footer{
             }
         }
         .inp{
-            width: 49px;
-            height: 40px;
-            border: 1px solid #86868B;
-            border-radius: 9px;
+            width: 4.9rem;
+            height: 4rem;
+            border: .1rem solid #86868B;
+            border-radius: .9rem;
             background: transparent;
             font-weight: 500;
             text-align: center;
-            padding-left: 4px;
-            padding-right: 4px;
-            margin-left: 13px;
-            margin-right: 13px;
+            padding-left: .4rem;
+            padding-right: .4rem;
+            margin-left: 1.3rem;
+            margin-right: 1.3rem;
         }
     }
     &__price{
         margin-left: auto;
-        padding-left: 3px;
+        padding-left: .3rem;
         font-weight: 500;
-        font-size: 32px;
-        line-height: 38px;
+        font-size: 3.2rem;
+        line-height: 3.8rem;
         color: #221F20;
         position: relative;
-        &._new{
+        ._new{
             background: #FF3232;
-            padding: 5px 9px;
-            border-radius: 9px;
-            font-size: 24px;
-            line-height: 29px;
+            padding: .5rem .9rem;
+            border-radius: .9rem;
+            font-size: 2.4rem;
+            line-height: 2.9rem;
             display: flex;
             align-items: center;
             color: #fff;
+            position: relative;
+            z-index: 1;
         }
         ._old{
-            height:23px;
-            padding-bottom: 4px;
+            background: #BCBCC5;
+            border-radius: .7rem;
+            transform: rotate(6deg) translate(0, -15%);
+            transition: transform .2s ease-in-out;
+            padding: .5rem 1rem;
             position: absolute;
-            left: 0; right: 0;
-            top: 0;
-            transform: translateY(-100%);
+            top: .2rem; bottom: .2rem;
+            right: .5rem;left: .5rem;
             font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;
-            text-align: right;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
             text-decoration-line: line-through;
-            color: #BCBCC5;
+            will-change: transform; 
         }
     }
     &__foot{
-        padding: 0 45px;
+        padding: 0 4.5rem;
         & > .btn{
             width: 100%;
-            margin-top: 20px;
+            margin-top: 2rem;
         }
     }
     &__hovers{
@@ -1237,30 +1265,30 @@ footer{
             left: 0; right: 0;
             margin-left: auto;
             margin-right: auto;
-            bottom: 4px;
-            width: 6px;
-            height: 4px;
+            bottom: .4rem;
+            width: .6rem;
+            height: .4rem;
             &:after, &:before{
                 content: '';
                 position: absolute;
-                width: 80px;
-                height: 4px;
+                width: 8rem;
+                height: .4rem;
                 background: #FFFFFF;
                 transition: all .3s ease;
             }
             &:after{
-                left: 6px;
+                left: .6rem;
                 background: rgba(255, 255, 255, 0.5);
-                box-shadow: 0px 1px 2.3px rgba(134, 134, 139, 0);
+                box-shadow: 0px .1rem .23rem rgba(134, 134, 139, 0);
             }
             &:before{
                 right: 6px;
-                box-shadow: 0px 1px 2.3px rgba(134, 134, 139, 0.3);
-                border-radius: 6px;
+                box-shadow: 0px .1rem .23rem rgba(134, 134, 139, 0.3);
+                border-radius: .6rem;
             }
         }
         &:before{
-            left: 162px;
+            left: 16.2rem;
         }
         img{
             transition: opacity .3s ease;
@@ -1280,94 +1308,101 @@ footer{
                 visibility: visible;
             }
             span:after{
-                box-shadow: 0px 1px 2.3px rgba(134, 134, 139, 0.3);
-                border-radius: 6px;
+                box-shadow: 0px .1rem .23rem rgba(134, 134, 139, 0.3);
+                border-radius: .6rem;
             }
             span:before{
                 background: rgba(255, 255, 255, 0.5);
-                box-shadow: 0px 1px 2.3px rgba(134, 134, 139, 0);
+                box-shadow: 0px .1rem .23rem rgba(134, 134, 139, 0);
             }
         }
     }
 
     @media only screen and (max-width: 1860px){
-        margin-left: -15px;
-        margin-right: -15px;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
         &__col{
-            padding: 0 15px 35px;
+            padding: 0 1.5rem 3.5rem;
         }
         &__body, &__foot{
-            padding: 0 35px;
+            padding: 0 3.5rem;
         }
     }
 
     @media only screen and (max-width: 1720px){
-        margin-left: -10px;
-        margin-right: -10px;
+        margin-left: -1rem;
+        margin-right: -1rem;
         &__col{
-            padding: 0 10px 35px;
+            padding: 0 1rem 3.5rem;
         }
         &__body, &__foot{
-            padding: 0 35px;
+            padding: 0 3.5rem;
         }
         &__price{
-            font-size: 24px;
+            font-size: 2.4rem;
             &._new{
-                padding: 3px 5px;
+                padding: .3rem .5rem;
             }
         }
         &__item{
-            border-radius: 43px;
+            border-radius: 4.3rem;
         }
     }
 
     @media only screen and (max-width: 1580px){
-        margin-left: -10px;
-        margin-right: -10px;
+        margin-left: -1rem;
+        margin-right: -1rem;
         &__col{
-            padding: 0 10px 35px;
+            padding: 0 1rem 3.5rem;
         }
         &__body, &__foot{
-            padding: 0 35px;
+            padding: 0 3.5rem;
         }
         &__price{
-            font-size: 24px;
-            line-height: 29px;
+            font-size: 2.4rem;
+            line-height: 2.9rem;
         }
         &__counter{
             .btn{
-                width: 35px;
-                height: 35px;
-                flex: 0 0 35px;
+                width: 3.5rem;
+                height: 3.5rem;
+                flex: 0 0 3.5rem;
             }
             .inp{
-                width: 43px;
-                height: 35px;
-                padding-left: 2px;
-                padding-right: 2px;
-                margin-left: 7px;
-                margin-right: 7px;
+                width: 4.3rem;
+                height: 3.5rem;
+                padding-left: .2rem;
+                padding-right: .2rem;
+                margin-left: .7rem;
+                margin-right: .7rem;
             }
         }
         &__props{
             .mark-info{
-                width: 35px;
-                height: 35px;
+                width: 3.5rem;
+                height: 3.5rem;
             }
         }
     }
 
-    @media only screen and (max-width: 1380px){
+    // @media only screen and (max-width: 1380px){
+    //     &__col{
+    //         flex: 0 0 50%;
+    //         max-width: 50%;
+    //     }
+    //     &__body, &__foot{
+    //         padding: 0 3.5rem;
+    //     }
+    // }
+
+    @media only screen and (max-width: 1024px){
         &__col{
             flex: 0 0 50%;
             max-width: 50%;
         }
         &__body, &__foot{
-            padding: 0 35px;
+            padding: 0 3.5rem;
         }
-    }
-
-    @media only screen and (max-width: 1024px){
         &__item{
             border-radius: 40px;
         }
@@ -1407,10 +1442,10 @@ footer{
 
 .cmark{
     background: #FFE7D6;
-    border-radius: 16px;
-    padding: 3px 10px;
-    font-size: 14px;
-    line-height: 17px;
+    border-radius: 1.6rem;
+    padding: .3rem 1rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
     color: #992B2B;
     white-space: nowrap;
     flex-shrink: 0;
@@ -1421,14 +1456,14 @@ footer{
     align-items: center;
     justify-content: center;
     background: #E8E8E8;
-    border-radius: 9px; 
-    width: 40px;
-    height: 40px;
+    border-radius: .9rem; 
+    width: 4rem;
+    height: 4rem;
     transition: all .2s ease-in-out;
     svg{
         fill: #86868B;
-        width: 19px;
-        height: 19px;
+        width: 1.9rem;
+        height: 1.9rem;
         transition: all .2s ease-in-out;
     }
     &:hover{
@@ -1444,29 +1479,29 @@ footer{
 }
 
 .basket{
-    width: 400px;
+    width: 40rem;
     background: #FFFFFF;
-    box-shadow: 0px 0px 45px rgba(47, 47, 47, 0.16);
-    border-radius: 25px 25px 0px 0px;
-    padding: 30px;
+    box-shadow: 0px 0px 4.5rem rgba(47, 47, 47, 0.16);
+    border-radius: 2.5rem 2.5rem 0px 0px;
+    padding: 3rem;
     position: fixed;
-    right: calc(((100vw - 1920px) / 2) + 100px);
+    right: calc(((100vw - 1920px) / 2) + 10rem);
     bottom: -100%;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease, bottom 0.4s ease;
     &__close{
-        width: 45px;
-        height: 45px;
+        width: 4.5rem;
+        height: 4.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
         position: absolute;
-        right: 15px; top: 15px;
+        right: 1.5rem; top: 1.5rem;
         cursor: pointer;
         svg{
-            width: 15px;
-            height: 15px;
+            width: 1.5rem;
+            height: 1.5rem;
             stroke: #86868B;
             transition: all .2s ease-in-out;
         }
@@ -1478,17 +1513,17 @@ footer{
     }
     &__caption{
         font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 2rem;
+        line-height: 2.4rem;
         color: #221F20;
     }
     &__body{
-        padding: 25px 0;
+        padding: 2.5rem 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
         strong{
-            font-size: 24px;
+            font-size: 2.4rem;
             font-weight: 500;
         }
     }
@@ -1498,17 +1533,10 @@ footer{
         bottom: 0;
     }
     @media only screen and (max-width: 1920px){
-        right: 100px;
+        right: 10rem;
     }
-    @media only screen and (max-width: 1860px){
-        right: 50px;
-    }
-    @media only screen and (max-width: 1720px){
-        width: 350px;
-        right: 30px;
-    }
-    @media only screen and (max-width: 1560px){
-
+    @media only screen and (max-width: 1280px){
+        right: 4rem;
     }
     @media only screen and (max-width: 1024px){
         left: 30px;
@@ -1528,52 +1556,58 @@ footer{
 .usprops-lock{
     background: #F5F5F7;
     border: 1px solid #D8D8D8;
-    box-shadow: 0px 9px 45px rgba(47, 47, 47, 0.3);
-    border-radius: 20px;
-    padding: 37px 20px 25px;
+    box-shadow: 0px .9rem 4.5rem rgba(47, 47, 47, 0.3);
+    border-radius: 2rem;
+    padding: 3.7rem 2rem 2.5rem;
     text-align: center;
     color: #86868B;
 
     position: absolute;
-    width: 286px;
+    width: 28.6rem;
     left: 0; right: 0;
     margin-left: auto;
     margin-right: auto;
-    top: 27px;
+    top: 2.7rem;
     z-index: 2;
     &__icon{
         display: flex;
         align-items: center;
         justify-content: center;
         background: #F2E9FF;
-        border-radius: 15px;
-        width: 64px;
-        height: 64px;
+        border-radius: 1.5rem;
+        width: 6.4rem;
+        height: 6.4rem;
         margin-left: auto;
         margin-right: auto;
         svg{
-            width: 28px;
-            height: 28px;
+            width: 2.8rem;
+            height: 2.8rem;
             fill:#564DBA;
         }
     }
     &__desc{
-        padding: 20px 15px 25px;
+        padding: 2rem 1.5rem 2.5rem;
     }
 }
 
 .flex-between{
     display: flex;
     justify-content: space-between;
-    min-width: 280px;
+    min-width: 28rem;
     span{
         color: #86868B;
+        flex: 0 0 35%;
+        max-width: 35%;
     }
     b{
         font-weight: 400;
+        flex: 0 0 65%;
+        max-width: 65%;
+        padding-left: 1rem;
+        text-align: right;
     }
     & + p{
-        margin-top: 5px;
+        margin-top: .5rem;
     }
 }
 
@@ -1592,42 +1626,39 @@ footer{
   }
 
   .livechat-link{
-    width: 73px;
-    height: 72px;
+    width: 7.3rem;
+    height: 7.2rem;
     display: flex;
-    padding-top: 22px;
+    padding-top: 2.2rem;
     justify-content: center;
     text-decoration: none;
     color: #454344;
     position: fixed;
     z-index: 7;
-    bottom: 100px;
-    right: calc(((100vw - 1920px) / 2) + 100px);
+    bottom: 10rem;
+    right: calc(((100vw - 1920px) / 2) + 10rem);
     transition: all .3s;
-    background: url('data:image/svg+xml,<svg width="73" height="72" viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M72.5 19C72.5 8.78273 64.2173 0.5 54 0.5H19C8.78274 0.5 0.5 8.78273 0.5 19V45.5C0.5 55.7173 8.78274 64 19 64H64.2964C67.8106 64 70.9209 65.9625 72.5 68.9162V59.5V19Z" fill="%23F5F5F7" stroke="%23E8E8E8"/></svg>');
+    background: url('data:image/svg+xml,<svg viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M72.5 19C72.5 8.78273 64.2173 0.5 54 0.5H19C8.78274 0.5 0.5 8.78273 0.5 19V45.5C0.5 55.7173 8.78274 64 19 64H64.2964C67.8106 64 70.9209 65.9625 72.5 68.9162V59.5V19Z" fill="%23F5F5F7" stroke="%23E8E8E8"/></svg>');
     svg{
-        width: 26px;
-        height: 24px;
+        width: 2.6rem;
+        height: 2.4rem;
         stroke: #454344;
         fill: none; 
         transition: all .3s;
     }
     @media (hover: hover) {
         &:hover{
-            background: url('data:image/svg+xml,<svg width="73" height="72" viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M73 19C73 8.50659 64.4934 0 54 0H19C8.50659 0 0 8.50659 0 19V45.5C0 55.9934 8.50659 64.5 19 64.5H60.5074C65.1884 64.5 69.5596 66.8394 72.1561 70.7342L73 72V59.5V19Z" fill="%23221F20"/></svg>');
+            background: url('data:image/svg+xml,<svg viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M73 19C73 8.50659 64.4934 0 54 0H19C8.50659 0 0 8.50659 0 19V45.5C0 55.9934 8.50659 64.5 19 64.5H60.5074C65.1884 64.5 69.5596 66.8394 72.1561 70.7342L73 72V59.5V19Z" fill="%23221F20"/></svg>');
             svg{
                 stroke: #fff;
             }
         }
     }
     @media only screen and (max-width: 1920px){
-        right: 100px;
+        right: 10rem;
     }
-    @media only screen and (max-width: 1860px){
-        right: 50px;
-    }
-    @media only screen and (max-width: 1720px){
-        right: 30px;
+    @media only screen and (max-width: 1280px){
+        right: 4rem;
     }
     @media only screen and (max-width: 1024px){
         display: none;
@@ -1653,6 +1684,168 @@ footer{
     }
     @media only screen and (max-width: 380px){
         right: 20px;
+    }
+  }
+
+
+  .hfooter{
+    .main-middle{
+        padding: 4.5rem;
+        padding-bottom: 3.5rem;
+        background: #F5F5F7;
+        border-radius: 5rem 5rem 0px 0px;
+    }
+    &__logo{
+        display: inline-flex;
+        align-items: center;
+        img{
+            width: 5.2rem;
+            height: 5.2rem;
+        }
+        span{
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            color: #221F20;
+            margin-left: 1.5rem;
+        }
+    }
+    &__txt{
+        font-size: 1.4rem;
+        line-height: 157%;        
+        color: #454344;
+        margin-top: 1.5rem;
+        a{
+            font-size: 1.4rem;
+            text-decoration: underline;
+            color: rgba(86, 77, 186, 0.75);
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+    &__bot{
+        margin-top: 3rem;
+        font-size: 1.4rem;
+        line-height: 157%;
+        color: #454344;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__head{
+        display: flex;
+        align-items: center;
+    }
+    &__soc{
+        display: flex;
+        align-items: center;
+        margin-left: 1.5rem;
+        li{
+            padding-left: 1.5rem;
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+    @media only screen and (max-width: 1024px){
+        margin-top: -3rem;
+        .main-middle{
+            border-radius: 3rem 3rem 0px 0px;
+            padding: 2.5rem;
+        }
+        &__soc{
+            margin-left: 0;
+            li{
+                padding-left: 1rem;
+            }
+        }
+    }
+  }
+
+  
+  .btn-choose{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    .custom-select{
+        flex: 0 0 10rem;
+        max-width: 10rem;
+        margin-left: 0.1rem;
+    }
+    .btn{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        flex: 1 0 auto;
+    }
+    .select-selected{
+        padding-left: 1.3rem;
+        padding-right: 2.8rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        height: 5rem;
+        font-size: 1.6rem;
+        color: #E8E8E8;
+        transition: background .2s ease-in-out;
+        &.select-arrow-active{
+            border-bottom-right-radius: 0;
+        }
+    }
+    .select-items{
+        background: red;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-top: 0;
+        color: #fff;
+        padding-top: 0;
+        padding-bottom: 1rem;
+        & > div{
+            margin-left: 0.4rem;
+            margin-right: 0.4rem;
+            margin-top: 0.2rem;
+            padding-left: 1rem;
+            padding-right: .5rem;
+            border-radius: .5rem;
+        }
+    }
+  }
+
+  .btn--red + .custom-select {
+    .select-items{
+        background: #D61D1D;
+        & > div{
+            &:hover{
+                background: #970E0E;
+            }
+            &.same-as-selected{
+                background: #690909;
+            }
+        }
+    }
+    .select-selected{
+        background: #FF3232;
+        &:hover, &.select-arrow-active{
+            background: #D61D1D;
+        }
+    }
+  }
+
+  .btn--black + .custom-select {
+    .select-items{
+        background: #454344;
+        & > div{
+            &:hover{
+                background: #999999;
+            }
+            &.same-as-selected{
+                background: #626262;
+            }
+        }
+    }
+    .select-selected{
+        background: #221F20;
+        &:hover, &.select-arrow-active{
+            background: #454344;
+        }
     }
   }
 
